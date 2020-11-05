@@ -1,38 +1,591 @@
-.App {
+/* ================ [ BASIC SETUP ] ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 20px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+/* ================ [ REUSABLE COMPONENTS ] ================= */
+.row {
+  width: 1920px;
+  margin: 0 auto;
+}
+
+.section {
+  height: 3em;
+}
+
+h2 {
+  font-weight: 900;
+  text-align: center;
+  font-size: 2.5em;
+  color: white;
+  padding: 1em;
+  text-shadow: 3px 3px 5px black;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 0.1em;
+  background: #ed462f;
+  margin: 0 auto;
+}
+
+/* ================ [ REUSABLE COMPONENT ] ================= */
+/* image url: /resources/css/hero-img.jpg  */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(https://i.imgur.com/tAqcZat.jpg?1); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.mobile-header {
+  display: none;
+}
+
+/* ================ [ HEADER ] ================= */
+.name {
+  display: inline-block;
+  transform: translate(8%, 50%)
+}
+
+.job-title {
+  display: inline-block;
+  transform: translate(46%, 70%);
+}
+
+.title-font {
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 5px black;
+  white-space: nowrap;
+  color: #dddddd;
+}
+
+.first-part-animation {
+  animation-name: intro;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in;
+  animation-delay: 0.3s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.second-part-animation {
+  animation-name: intro;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in;
+  animation-delay: 1.5s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.first-initals {
+  font-size: 8em;
+  margin-left: .5em;
+  opacity: 0;
+}
+
+.name-end {
+  font-size: 6em;
+  opacity: 0;
+}
+
+/* =================== [NAVBAR] ====================*/
+
+nav{
+  background: #849b67;
+  padding: 1.5%;
+  top: 0;
+  position: sticky;
+  z-index: 100;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+nav ul a{ 
+  font-size: 1.5em;
+  font-weight: 300;
+  color: white;
+  text-decoration: none;
+  background-image: linear-gradient(#fbce33, #fbce33);
+  background-size: 0 3px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition-property: font-weight, background-size;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+nav ul a:hover {
+  font-weight: 500;
+  padding-bottom: 10px;
+  background-size: 100% 3px, auto;
+}
+
+/* ==================== [ ABOUT ] ====================== */
+
+.about {
+  background: #849b67;
+  padding-bottom: 10%;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 5%;
+  margin-right: 5%;
+  /* grid-template-rows: auto; */
+  /* grid-row-gap: 0.5em; */
+}
+
+.about-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(45deg, #181818, 52%, #ed462f 75%);
+  width: 95%;
+  box-shadow: 0 4px 10px 4px black;
+}
+
+.about-left img {
+  display: inline-block;
+  width: 70%;
+  height: auto;
+  border-radius: 50%;
+  padding: 2%;
+}
+
+.about-right {
+  display: flex;
+  width: 95%;
+  align-items: center;
+  border: 0.25em solid #ed462f;
+  padding: 1.4em;
+  background: rgb(236, 233, 233);
+}
+
+.about-right p {
+  font-style: italic;
+  font-size: 1.4em;
+  line-height: 1.4em;
+  color: rgb(31, 30, 30);
+  padding: 1em 1.6em 1em 1.6em;
+}
+
+/* ============================= [ SKILLS ] ============================== */
+
+.skills-section {
+  height: 45vh;
+  background: #333;
+  box-shadow: 0px -3px 10px 5px #000;
+}
+
+.skills-icons {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  font-size: 5em;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 0.3em;
+  background: #333;
+  transition: all ease-in-out 1s;
+}
+
+.skills-icons img {
+  width: 6%;
+  transition: all ease-in-out 1s;
+}
+
+.skills-icons img :hover {
+  transform: scale(1.4);
+}
+
+/* ============================= [ PROJECTS ] ============================= */
+
+.project-container {
+  box-shadow: 0 3px 1.25em 0 rgba(0, 0, 0, 0.5);
+  border-radius: 1.25em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3em 18.75em;
+  grid-template-areas: "header header" "demo content";
+  margin: 0 auto 3.125em;
+}
+
+.project-title-container {
+  grid-area: header;
+  color: #ffffff;
+  font-size: 2em;
+  border-radius: 20px 20px 0 0;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  background: #fbce33;
+}
+
+.project-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.project-img-container img {
+  border-radius: 1em;
+  background: #fff;
+  border: 1px solid black;
+  margin-left: 0.5em;
+  cursor: pointer;
+}
+
+.project-title {
+  font-family: "Montserrat", Arial, Helvetica;
+  background: #fbce33;
+  color: #ed462f;
+  margin: 0 auto;
+}
+
+#project-content {
+  font-family: "Courier Prime", helvetica;
+  margin-top: 7%;
+  font-size: 1.2em;
+  padding: 0.6em;
+}
+
+.project-content-right i {
+  font-size: 3.5em; 
+  padding-right: 0.5em;
+  transition: all ease-in-out 1s;
+}
+
+.project-content-right i :hover {
+  transform: scale(1.5);
+}
+
+.project-content-right {
+  display: inline;
+  background: #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.project-content-right-container {
+  padding: 1.4em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.project-section-header {
+  background: #849b67;
+  padding: 2em;
+  margin-top: -5.3em;
+  margin-bottom: 3em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#projects {
+  height: 8vh;
+  background: #849b67;
+  margin-top: -1em;
+}
+
+/* ==================== [Hover Effect over Projects] ====================== */
+
+.hover-card {
+  position: relative;
+}
+
+.hover-card img {
+  transition: 250ms ease-out;
+}
+
+.hover-card:hover img {
+  opacity: 0.3;
+}
+
+.hover-project-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.hover-project-img a {
+  margin: 1em;
+  font-size: 4em;
+  text-decoration: none;
+  color: black;
+}
+
+.hover-project-img a:hover {
+  color: #ed462f;
+  font-weight: bold;
+}
+
+.hover-card:hover .hover-project-img {
+  opacity: 1;
+}
+
+/* =========================== [ CONTACT ] ============================ */
+
+.contact-main {
+  width: 35%;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 1.25em;
+  padding-bottom: 2em;
+  margin-bottom: 2.5em;
+}
+
+.contact-title {
+  background-color: #849b67;
+  border-radius: 1.25em 1.25em 0 0;
+  padding: 0.5em;
+}
+
+.contact-grid {
   display: flex;
-  flex-direction: column;
+  height: 23.4em;
+  justify-items: center;
+}
+
+.about-links {
+  position: relative;
+  font-size: .5em;
+  height: 3.125em;
+  background: #ebebeb;
+  color: #000000;
+  border-radius: 1.7em;
+  padding: 0 2.2px;
+  border-style: none;
+  outline: none;
+  transition: width 1s;
+  margin-top: 0.8em;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
 }
 
-.App-link {
-  color: #61dafb;
+.about-links a {
+  font-size: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.about-links a :hover {
+  font-weight: bold;
+}
+
+.about-links i {
+  margin-left: 0.6em;
+  color: #ed462f;
+}
+
+.icon-names {
+  font-family: "Courier Prime", helvetica;
+  margin-left: 0.5em;
+  color: #ed462f;
+}
+
+/* ====================== [Burger Menu] ======================== */
+#burger-menu,
+.burger-menu,
+.bm-burger-button,
+.small-header,
+.mobile-header,
+button {
+  display: none;
+  height: 0px;
+  width: 0px;
+  z-index: 0;
+}
+
+/* ========================= [ FOOTER ] ========================= */
+
+/* =========================== [Media Queries] ============================ */
+
+/* =========================== [ For Laptops ] =========================== */
+@media screen and (min-width: 1440px) {
+  #burger-menu,
+  .burger-menu,
+  .small-header,
+  .mobile-header,
+  .bm-item-list,
+  .button,
+  .bm-burger-button {
+    display: none;
+    width: 0;
+    height: 0;
+    z-index: 0;
   }
-  to {
-    transform: rotate(360deg);
+  /* =============== [Header] =============== */
+  
+  /* =============== [About] ================= */
+  
+
+  /* ============ [Projects] ============= */
+
+  
+
+  /* ============= [Contact] ============== */
+
+
+  /* ============== [Footer ============== */
+
+ 
+}
+
+/* =========================== [ For iPod Pro ] =========================== */
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+  #burger-menu,
+  .burger-menu,
+  .small-header,
+  .mobile-header,
+  .bm-item-list {
+    display: none;
+    width: 0;
+    height: 0;
+    z-index: 0;
   }
+
+  button,
+  .bm-burger-button {
+    display: none;
+    width: 0;
+    height: 0;
+    z-index: 0;
+  }
+
+  /* ============= [ HEADER ] ============= */
+
+  
+
+  /* ================ [ NAVBAR ] ================= */
+
+  
+
+  /* ================= [ ABOUT ] ================== */
+
+  
+
+  /* ============= [ SKILLS ] ============ */
+
+  
+
+  /* ================ [ PROJECTS ] ================= */
+
+  
+
+  /* =============== [ CONTACT ] ================ */
+
+  
+}
+
+/* ====================== [ iPad ] ============================ */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #burger-menu,
+  .burger-menu,
+  .bm-burger-button,
+  .small-header,
+  .mobile-header,
+  .bm-item-list,
+  button {
+    display: none;
+  }
+  html {
+    width: 176%;
+  }
+
+  /* ============= [ HEADER ] ============== */
+
+  
+
+  /* ============= [ NAVBAR ] =============== */
+
+  
+
+  /* ============= [ ABOUT ] ============== */
+
+  
+
+  /* ================= [ SKILLS ] ================ */
+
+  
+
+  /* ============== [ PROJECTS ] ================ */
+
+  
+
+  /* =============== [ CONTACT ] ================= */
+
+  
+}
+
+/* ================= [ MOBILE ] =================== */
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  .navbar {
+    display: none;
+  }
+  html {
+    width: 400%;
+  }
+
+  /* ============ [ HEADER ] =============== */
+
+  
+
+  /* =============== [ ABOUT ] ================ */
+
+  
+
+  /* =============== [ SKILLS ] ================ */
+
+  
+
+  /* =============== [ PROJECTS ] =============== */
+
+  
+
+  /* ============= [ CONTACT ] ============= */
+
+  
+
+  /* ============= [ BURGER MENU ] ================ */
+
+  
 }

@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import About from './components/About';
+import Contact from './components/Contact';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import BurgerMenu from './components/BurgerMenu';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  // componentDidMount = () => {
+  //   AOS.init({
+  //     duration: 600,
+  //   });
+  // }
+
+  render() {
+    return (
+      <>
+        <BurgerMenu pageWrapId={"page-wrap"} outerContainerId={"App"} />
+          <Header />
+          <Navbar />
+          <main>
+            <About />
+            <Skills />
+            <div id="projects"></div>
+            <Projects />
+            <Contact />
+            <Footer />
+          </main>
+      </>
+    );
+  }
 }
 
 export default App;
