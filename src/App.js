@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+// import { Route } from 'react-router-dom'
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -26,7 +27,7 @@ class App extends React.Component {
           <main>
             <About />
             <Skills />
-            <div id="projects"></div>
+            {/* <div id="projects"></div> */}
             <Projects />
             <Contact />
             <Footer />
