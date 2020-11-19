@@ -268,7 +268,7 @@ nav ul a:hover {
   flex-direction: column;
   justify-content: center;
   margin-top: 5%;
-  width: 25%;
+  width: 26%;
   height: fit-content;
   border-radius: 1.25em;
   box-shadow: 0 3px 1.25em 0 rgba(0, 0, 0, 0.5);
@@ -285,14 +285,15 @@ nav ul a:hover {
 
 .project-container-img {
   align-self: center;
-  
+  width: fit-content;
+  transform: scale(.75);
 }
 
 .project-container-img img{
   border-radius: 1em;
   background: #fff;
   border: 1px solid black;
-  transform: scale(.75);
+  /* transform: scale(.75) */
 }
 
 .project-container-img img:hover{
@@ -301,24 +302,27 @@ nav ul a:hover {
 
 .project-description {
  place-self: center;
- width: 65%;
- height: 12vh;
+ padding: 2% 6% 0;
+ /* width: 65%; */
+ height: 10vh;
+ border-top: 1px solid rgba(78,82,85,.3);
+ border-bottom: 1px solid rgba(78, 82, 85, 0.3);
 }
 
 .project-icon-bar {
   height: fit-content;
-  padding: 1em;
+  padding: 4% 0;
   display: flex; 
   justify-content: space-evenly; 
 }
 
 .project-icon-bar img {
-  width: 8%;
+  width: 10%;
 }
 
 .project-description p{
   font-family: "Roboto", helvetica;
-  font-size: .8em;
+  font-size: .75em;
   /* padding: 1% 16%; */
 }
 

@@ -6,9 +6,7 @@ function ProjectIcons(props) {
     <div className="project-icon-bar">
       {props.icons.map((icon, index) => {
         return (
-          
-            <img className='project-icons' key={index} src={icon[0]} alt={icon[1]} />
-          
+            <img className='project-icons' key={index} src={icon[0]} alt={icon[1]} /> 
         )
       })}
     </div>
