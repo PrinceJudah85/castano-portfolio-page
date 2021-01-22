@@ -8,8 +8,7 @@ function Project(props) {
       <div className='project-container-title'>
         <h3>{props.title}</h3>
       </div>
-      <div className="project-container-img">
-        
+      <div className="project-container-img"> 
         <img className="project-img" src={props.image} alt={props.imageAlt}/>
         <div className="hover-links">
           <a href={props.githubLink} target="_blank" rel="noopener noreferrer">

@@ -25,7 +25,7 @@ export default function Projects() {
             imageAlt={"Little Red Hens website gif"}
             githubLink={"https://github.com/PrinceJudah85/Two-Little-Red-Hens"}
             projectLink={"http://red-hens-project.surge.sh/"}
-            description={"A UX collaboration website re-design project of a New York City based bakery"} />
+            description={"A UX collaboration website re-design project of a New York City based bakery built with React and CSS3."} />
           <ProjectIcons
             icons={[
               [html5Icon, 'html5 svg icon'],
@@ -68,7 +68,6 @@ export default function Projects() {
               [postgres, 'postgres svg icon']
             ]} />
         </div> 
-        
       </div>
     </section>
   )
