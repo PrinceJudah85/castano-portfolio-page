@@ -2,7 +2,6 @@ import React from 'react'
 
 
 function Project(props) {
-  // <div className="hover-card"></div>
   return (
     <>
       <div className='project-container-title'>

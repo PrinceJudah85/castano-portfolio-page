@@ -10,6 +10,8 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import BurgerMenu from './components/BurgerMenu';
 
+import { stacks } from './svg-icons';
+
 class App extends React.Component {
 
   // componentDidMount = () => {
@@ -26,8 +28,7 @@ class App extends React.Component {
           <Navbar />
           <main>
             <About />
-            <Skills />
-            {/* <div id="projects"></div> */}
+            <Skills stacks={stacks}/>
             <Projects />
             <Contact />
             <Footer />
