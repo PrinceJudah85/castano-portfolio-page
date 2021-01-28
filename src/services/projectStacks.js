@@ -4,6 +4,8 @@ import reactIcon from '../svg-icons/react.svg'
 import jsIcon from '../svg-icons/javascript.svg'
 import expressIcon from '../svg-icons/expressBlack.svg'
 import postgresIcon from '../svg-icons/postgres.svg'
+import chromeIcon from '../svg-icons/chromeIcon.svg'
+import githubDark from '../svg-icons/githubDark.svg'
 
 export const p1 = [
   {
@@ -78,3 +80,8 @@ export const p3 = [
     name: 'PostgreSQL'
   }
 ]
+
+export const overlay = [
+  [chromeIcon, 'chrome svg icon'],
+  [githubDark, 'github svg icon']
+];

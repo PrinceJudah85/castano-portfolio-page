@@ -9,6 +9,7 @@ import mongodbIcon from '../svg-icons/mongodb.svg'
 import githubIcon from '../svg-icons/github.svg'
 
 export const stacks = [
+  
   {
     icon: html5Icon,
     description: 'html5 svg icon',

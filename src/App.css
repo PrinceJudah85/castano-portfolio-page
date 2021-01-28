@@ -21,7 +21,7 @@ body {
 }
 
 .section {
-  height: 3em;
+  height: 3.5em;
 }
 
 h2 {
@@ -289,42 +289,24 @@ nav ul a:hover {
 
 .project-container-title {
   background: #fbce33;
-  border-radius: 20px 20px 0 0;
-}
-
-.project-container-img {
-  align-self: center;
-  width: fit-content;
-  transform: scale(.75);
-}
-
-.project-container-img img{
-  border-radius: 1em;
-  background: #fff;
-  border: 1px solid black;
-  /* transform: scale(.75) */
-}
-
-.project-container-img img:hover{
-  opacity: .25;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .project-description {
- place-self: center;
- text-align: center;
- padding: 2.5% 2.5%;
- height: 7em;
- border-top: 1px solid rgba(78,82,85,.3);
- border-bottom: 1px solid rgba(78, 82, 85, 0.3);
- line-height: 1.4em;
+  text-align: center;
+  padding: 2.5% 2.5%;
+  height: 7em;
+  border-top: 1px solid rgba(78,82,85,.3);
+  border-bottom: 1px solid rgba(78, 82, 85, 0.3);
+  line-height: 1.4em;
 }
 
 .project-icon-bar {
-  height: fit-content;
-  padding: 4% 0;
   display: flex; 
   justify-content: space-evenly;
   position: relative;
+  height: fit-content;
+  padding: 4% 0;
 }
 
 .project-icon-bar img {
@@ -337,9 +319,79 @@ nav ul a:hover {
 }
 
 #projects {
-  height: 5vh;
+  height: 8vh;
   background: #849b67;
 }
+
+.project-container-img { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.project-img img{ 
+  border-radius: 1em;
+  border: 1px solid rgba(78, 82, 85, .6);
+  transform: scale(.95)
+}
+
+.project-container-img .overlay-icons {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: fit-content;
+  opacity: 0;
+  top: 2rem;
+}
+
+.overlay-icons a{
+ display: inline-block;
+ color: black;
+ text-decoration: none;
+ font-size: 1.4rem;
+}
+
+.overlay-icons a > img {
+  width: 4em;
+}
+
+.overlay-icons a:first-child {
+  margin-left: 1.5em;
+  transition: transform ease-in 200ms;
+}
+
+.overlay-icons a:last-child {
+  margin-right: 4em;
+  left: -6em;
+  transition: transform ease-in 250ms;
+}
+
+/* ==================== [Hover Effect over Projects] ====================== */
+.overlay-icons a:first-child:hover,
+.overlay-icons a:last-child:hover {
+    transform: scale(1.2);
+  }
+
+.overlay-icons a:first-child:hover::after {
+  content: "Website";
+  font-size: 1em;
+  position: absolute;
+  top: 4em;
+}
+
+.overlay-icons a:last-child:hover::after {
+  content: "GitHub Repo";
+}
+
+.project-container-img:hover .project-img img{
+  filter: brightness(25%);
+  opacity: .3;
+}
+
+.project-container-img:hover .overlay-icons {
+  opacity: 1;
+} 
 
 /* ==================== [Hover Effect over languages] ===================== */
 .hover-icon-effect::after {
@@ -371,47 +423,10 @@ nav ul a:hover {
   transform: scale(1);
 }
 
+/* ==================== [Hover Effect over Contact Links] ====================== */
 
-/* .project-icon:hover::after {
-  transform: scale(1);
-} */
-
-/* ==================== [Hover Effect over Projects] ====================== */
-
-.hover-card {
-  position: relative;
-}
-
-.hover-card img {
-  transition: 250ms ease-out;
-}
-
-.hover-card:hover img {
-  opacity: 0.3;
-}
-
-.hover-project-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-}
-
-/* .hover-links a {
-  margin: 1em;
-  font-size: 4em;
-  text-decoration: none;
-  color: black;
-} */
-
-.hover-links a:hover {
+.contact-links :hover {
   color: #ed462f;
-  font-weight: bold;
-}
-
-.hover-card:hover .hover-project-img {
-  opacity: 1;
 }
 
 /* =========================== [ CONTACT ] ============================ */
@@ -453,10 +468,6 @@ nav ul a:hover {
   outline: none;
 }
 
-.contact-links :hover {
-  color: #ed462f;
-}
-
 .contact-links i {
   margin-left: 0.6em;
   color: #10110f;
@@ -489,7 +500,7 @@ button {
 
 /* =========================== [ For Laptops ] =========================== */
 @media screen and (max-width: 1440px) {
-  #burger-menu,
+  /* #burger-menu,
   .burger-menu,
   .small-header,
   .mobile-header,
@@ -499,8 +510,8 @@ button {
     display: none;
     width: 0;
     height: 0;
-    z-index: 0;
-  }
+    z-index: 0; */
+
   html,
   body {
     font-size: 16px;
@@ -513,9 +524,14 @@ button {
   
 
   /* ============ [Projects] ============= */
+  .project-container-img {
+    transform: scale(.80)
+  }
 
+  .overlay-icons a{
+    font-size: 1.8rem;
+   }
   
-
   /* ============= [Contact] ============== */
 
 

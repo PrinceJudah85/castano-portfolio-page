@@ -9,16 +9,9 @@ import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import BurgerMenu from './components/BurgerMenu';
-
 import { stacks } from './svg-icons';
 
 class App extends React.Component {
-
-  // componentDidMount = () => {
-  //   AOS.init({
-  //     duration: 600,
-  //   });
-  // }
 
   render() {
     return (

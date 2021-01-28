@@ -2,14 +2,13 @@ import React from 'react'
 import Project from './Project'
 import ProjectIcons from './ProjectIcons' 
 
-import { p1, p2, p3 } from '../services' // Project SVG Icons
-// import chromeIcon from '../svg-icons/chromeIcon.svg'
+import { p1, p2, p3, overlay } from '../services/projectStacks' // Project SVG Icons
 
 export default function Projects() {
   return (
     <section className="projects">
       <div className="project-section-header">
-        <div id="projects"></div>
+        <div className="section" id="projects"></div>
         <h2>Projects</h2>
       </div>
       <div className='project-section'>
@@ -20,7 +19,8 @@ export default function Projects() {
             imageAlt={"Little Red Hens website gif"}
             githubLink={"https://github.com/PrinceJudah85/Two-Little-Red-Hens"}
             projectLink={"http://red-hens-project.surge.sh/"}
-            description={"A UX collaboration website re-design project of a New York City based bakery built with React and CSS3."} />
+            description={"A UX collaboration website re-design project of a New York City based bakery built with React and CSS3."}
+            overlay={overlay} />
           <ProjectIcons
             icons={p1} />
         </div>  
@@ -31,7 +31,8 @@ export default function Projects() {
             imageAlt={'Transparency website gif'}
             githubLink={'https://github.com/PrinceJudah85/project-transparency'}
             projectLink={'http://transparency-project.surge.sh/'}
-            description={'A responsive front-end web app, built through React, that hits the USAspending.gov API. Showcasing the annual spending of each top tier government agency for the current fiscal year.'} />
+            description={'A responsive front-end web app, built through React, that hits the USAspending.gov API. Showcasing the annual spending of each top tier government agency for the current fiscal year.'}
+            overlay={overlay} />
           <ProjectIcons
             icons={p2} />
         </div> 
@@ -42,7 +43,8 @@ export default function Projects() {
             imageAlt={'Undisclosed website gif'}
             githubLink={'https://github.com/PrinceJudah85/Undisclosed'}
             projectLink={'http://undisclosed.surge.sh/'}
-            description={'An urban focused, user generated content, full-stack blog web app, built through React and Express, that allows users to upload their favorite city locations and comment on other posts.'} />
+            description={'An urban focused, user generated content, full-stack blog web app, built through React and Express, that allows users to upload their favorite city locations and comment on other posts.'}
+            overlay={overlay} />
           <ProjectIcons
             icons={p3} />
         </div> 
