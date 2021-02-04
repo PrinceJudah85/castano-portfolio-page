@@ -2,11 +2,6 @@ import React from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 
 export default function Navbar() {
-  /* <a href="#home">Home</a> 
-     <a href="#about">About</a>
-     <a href="#projects">Projects</a>
-     <a href="#contact">Contact</a>
-  */
   return (
     <nav>
       <ul className='navbar'>

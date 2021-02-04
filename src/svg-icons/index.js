@@ -36,14 +36,14 @@ export const stacks = [
     name: 'Express.js'
   },
   {
-    icon: postgresIcon,
-    description: 'postgres svg icon',
-    name: 'PostgreSQL'
-  },
-  {
     icon: nodejsIcon,
     description: 'node svg icon',
     name: 'Node.js'
+  },
+  {
+    icon: postgresIcon,
+    description: 'postgres svg icon',
+    name: 'PostgreSQL'
   },
   {
     icon: mongodbIcon,

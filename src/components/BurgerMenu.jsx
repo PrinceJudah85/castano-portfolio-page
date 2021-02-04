@@ -10,6 +10,7 @@ class BurgerMenu extends React.Component {
   }
 
   handleStateChange(state) {
+    console.log(state)
     this.setState({ menuOpen: state.isOpen })
   }
 
