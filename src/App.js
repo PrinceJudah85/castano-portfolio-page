@@ -8,18 +8,18 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import BurgerMenu from './components/BurgerMenu';
+// import Burger from './components/Burger';
 import { stacks } from './svg-icons';
+import BurgerMenu from './components/BurgerMenu'; // Burger Menu Class Component
 
-class App extends React.Component {
+function App () {
 
-  render() {
     return (
       <>
-        <BurgerMenu pageWrapId={"page-wrap"} outerContainerId={"App"} />
+        <BurgerMenu pageWrapId={'page-wrap'} />
           <Header />
           <Navbar />
-          <main>
+          <main id='page-wrap'>
             <About />
             <Skills stacks={stacks}/>
             <Projects />
@@ -28,7 +28,6 @@ class App extends React.Component {
           </main>
       </>
     );
-  }
 }
 
 export default App;

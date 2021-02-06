@@ -7,16 +7,16 @@
 
 html,
 body {
-  font-size: 20px;
+  font-size: 1.38vw; /* ~ 20px */
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
 }
 
-/* ================ [ REUSABLE COMPONENTS ] ================= */
+/* =============== [ REUSABLE COMPONENTS ] =============== */
 .row {
-  max-width: 1920px;
+  width: 100vw;
   margin: 0 auto;
 }
 
@@ -27,7 +27,7 @@ body {
 h2 {
   font-weight: 900;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: white;
   padding: 1rem;
   text-shadow: 3px 3px 5px black;
@@ -74,17 +74,17 @@ header {
 .header-title {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100vw;
   transform: translate(0, 40%);
 }
 
 .name {
-  padding-left: 5vw;
+  margin-left: 5vw; 
 }
 
 .job-title {
   align-self: flex-end;
-  padding-right: 6vw;
+  padding-right: 5vw;
 }
 
 .title-font {
@@ -129,36 +129,39 @@ header {
   }
 }
 
-.first-initals {
-  font-size: 8rem;
-  margin-left: 5%;
+.first-initials {
+  font-size: 9vw;
   letter-spacing: .15rem;
   opacity: 0;
 }
 
+.second-initial {
+  margin-left: 4vw;
+}
+
 .name-end {
-  font-size: 6rem;
+  font-size: 7vw;
   letter-spacing: .15rem;
   opacity: 0;
 }
 
 /* ======================= [NAVBAR] =========================*/
-nav{
+nav {
   background: #849b67;
-  padding: 1.5%;
+  padding: 1.3vw;
   top: 0;
   position: sticky;
   z-index: 100;
 }
 
-nav ul{
+nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style-type: none;
 }
 
-nav ul a{ 
+nav ul a { 
   font-size: 1.5rem;
   font-weight: 300;
   color: white;
@@ -219,7 +222,7 @@ nav ul a:hover {
 
 .about-right p {
   font-style: italic;
-  font-size: 1.4rem;
+  font-size: 1.125rem;
   line-height: 1.45em;
   color: rgb(31, 30, 30);
   padding: 1em 1.6em 1em 1.6em;
@@ -232,7 +235,7 @@ nav ul a:hover {
 }
 
 .skills-display {
-  height: 28vh;
+  height: 17vh;
   background: #333;
   margin-left: 5%;
   margin-right: 5%;
@@ -257,7 +260,7 @@ nav ul a:hover {
 }
 
 .skills-bar img {
-  width: 3.5em;
+  width: 3.3rem;
   transition: transform ease-in-out 1s;
 }
 
@@ -281,7 +284,7 @@ nav ul a:hover {
   flex-direction: column;
   justify-content: center;
   margin-top: 5%;
-  width: 26%;
+  width: 26vw;
   height: fit-content;
   border-radius: 1.25em;
   box-shadow: 0 3px 1.25em 0 rgba(0, 0, 0, 0.5);
@@ -301,7 +304,7 @@ nav ul a:hover {
   justify-content: center;
   text-align: center;
   align-items: center;
-  padding: 2.5% 2.5%;
+  padding: 2.5%;
   border-top: 1px solid rgba(78,82,85,.3);
   border-bottom: 1px solid rgba(78, 82, 85, 0.3);
   line-height: 1.5em;
@@ -323,7 +326,9 @@ nav ul a:hover {
 
 .project-description p{
   font-family: "Roboto", helvetica;
-  font-size: 1em;
+  font-weight: 400;
+  font-size: .9rem;
+  letter-spacing: .04rem;
 }
 
 #projects {
@@ -350,14 +355,13 @@ nav ul a:hover {
   justify-content: space-between;
   align-items: center;
   opacity: 0;
-  top: 2rem;
 }
 
 .overlay-icons a{
  display: inline-block;
  color: black;
  text-decoration: none;
- font-size: 2vw;
+ font-size: 2rem;
 }
 
 .overlay-icons a > img {
@@ -440,7 +444,7 @@ nav ul a:hover {
 /* =========================== [ CONTACT ] ============================ */
 
 .contact-main {
-  width: 35%;
+  width: 32vw;
   margin: auto;
   background: #ffffff;
   box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.5);
@@ -458,14 +462,14 @@ nav ul a:hover {
 .contact-flex {
   display: flex;
   flex-direction: column;
-  height: 23.4em;
+  height: 19em;
   justify-content: space-evenly;
   align-items: center;
 }
 
 .contact-links {
   position: relative;
-  font-size: 1.3em;
+  font-size: 1.1em;
   height: fit-content;
   text-align: center;
   width: 86%;
@@ -490,10 +494,17 @@ nav ul a:hover {
 /* ====================== [Burger Menu] ======================== */
 #burger-menu,
 .burger-menu,
-.bm-burger-button,
 .small-header,
 .mobile-header,
-button {
+.bm-item-list {
+  display: none;
+  width: 0;
+  height: 0;
+  z-index: 0;
+}
+
+button,
+.bm-burger-button {
   display: none;
   height: 0px;
   width: 0px;
@@ -509,28 +520,8 @@ button {
 /* =========================== [Media Queries] ============================ */
 
 /* =========================== [ For Laptops ] =========================== */
-@media screen and (max-width: 1680px) { 
-  html, body {
-    font-size: 16px;
-  }
-
-.job-title { padding-right: 4.5vw; }
-
-}
-
-@media screen and (max-width: 1441px) {
-  html,
-  body {
-    font-size: 16px;
-  }
-  /* =============== [Header] =============== */
-  .name {
-    align-self: flex-start;
-  }
-
-  .job-title {
-    align-self: flex-end;
-  }
+@media screen and (min-width: 1025px) and (max-width: 1441px) {
+  /* =============== [Header] ================ */
   /* =============== [About] ================= */
   /* ============== [Projects] =============== */
   .project-container-img img{
@@ -552,7 +543,6 @@ button {
 }
 
 /* =========================== [ For iPod Pro ] =========================== */
-/* (min-width: 1024px) and (max-width: 1400px) */
 @media screen and (max-width: 1024px) {
   #burger-menu,
   .burger-menu,
@@ -573,19 +563,13 @@ button {
     z-index: 0;
   }
 
-  html,
-  body {
-    font-size: 15px;
-  }
   /* ================ [ HEADER ] ================= */
-  .name {
-    align-self: center;
-    padding-left: 0;
+  header {
+    height: 92vh;
   }
-  .job-title {align-self: center;}
   /* ================ [ NAVBAR ] ================= */
   nav ul a {
-    font-size: 2.2rem;
+    font-size: 2.7rem;
   }
   /* ================= [ ABOUT ] ================== */
   .about-left img {
@@ -593,7 +577,8 @@ button {
   }
   /* ================= [ SKILLS ] ================= */
   .skills-display {
-    height: 18vh;
+    height: 15vh;
+    padding-bottom: 14%;
   }
   /* ================ [ PROJECTS ] ================= */
   .project-section {opacity: 1;}
@@ -620,7 +605,7 @@ button {
   }
 
   .project-container-img img{
-    transform: scale(.7);
+    transform: scale(.58);
   }
   
   .project-description {
@@ -631,8 +616,9 @@ button {
   }
 
   .project-description p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     line-height: 2rem;
+    padding: 3%;
   }
 
   .project-description::before {
@@ -697,91 +683,126 @@ button {
   } 
 
   /* =============== [ CONTACT ] ================ */
-  .contact-main {
-    width: 55%;
-  }
   
   .icon-names {
     font-size: 1.5rem;
   }
 }
-/* ====================== [ iPad ] ============================ */
-/* (min-width: 768px) and (max-width: 1023px) */
-@media screen and (max-width: 768px) {
-  html, body{
-    width: 100vw;
-    font-size: 13px;
-  }
-  /* =============== [ HEADER ] ================ */
-  header {
-    height: 90vh;
-  }
-  .name {font-size: 4rem;}
-  /* =============== [ NAVBAR ] ================ */
-  /* ================ [ ABOUT ] ================ */
-  /* ================ [ SKILLS ] =============== */
-  /* ============== [ PROJECTS ] =============== */
-  .project-container-img img{
-    transform: scale(.65);
-  }
-  
-  .project-description p{
-    font-size: 1.25rem;
-    padding: 3%;
-  }
-  
-  /* =============== [ CONTACT ] ================= */
-  .contact-main {
-    width: 55%;
-  }
-}
-/* ========= [ > large Phones && < Ipads ] =========== */
-@media screen and (min-width: 601px) and (max-width: 766px ) {
 
-  html, body {
-    font-size: 10px;
-  }
+/* ========= [ Ipad && X-Large Phones ] =========== */
+  @media screen and (min-width: 601px ) and (max-width: 768) {
+/* =============== [ HEADER ] ================ */
+/* =============== [ NAVBAR ] ================ */
+/* ================ [ ABOUT ] ================ */
+/* ================ [ SKILLS ] =============== */
 /* ============== [ PROJECTS ] =============== */
-  .project-container-img img{
-    transform: scale(.55);
+
+  .project-container-img img {
+    transform: scale(.5);
+  }
+
+/* =============== [ CONTACT ] ================= */
+  .contact-main {
+    width: 32vw;
   }
 }
+
 /* ================= [large phones] ================= */
 @media screen and (min-width: 320px) and (max-width: 600px) {
-#burger-menu,
-.burger-menu,
-.bm-burger-button,
-.small-header,
-.mobile-header,
-button {
+
+/* Position and sizing of burger button */
+.bm-burger-button {
   display: inline-block;
-  position: absolute;
+  position: fixed;
+  width: 16vw;
+  height: auto;
   top: 0;
   right: 0;
-  height: 20px;
-  width: 1rem;
-  z-index: 100;
-  color:white;
 }
-  nav {
-    display: none;
-  }
-  
-  html,
-  body {
-    position: relative;
-    font-size: 10px;
-  }
-  /* ============ [ HEADER ] =============== */
-  header {
-    height: 100vh;
-  }
-  /* =============== [ ABOUT ] ================ */
-  /* =============== [ SKILLS ] ================ */
-  /* =============== [ PROJECTS ] =============== */
-  .project-container-img img{
-    transform: scale(.60);
-  }
-  /* ============= [ CONTACT ] ============= */
-  /* ============= [ BURGER MENU ] ================ */
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  display: block;
+  background:#fbce33;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  font-weight: bold;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  display: inline-block;
+  height: 1.1rem;
+  width: 1.1rem;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #fbce33;
+}
+
+/* Sidebar wrapper styles */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General Sidebar styles */
+.bm-menu {
+  display: block;
+  background: #fbce33;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #ed462f;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.7em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+html,
+body {
+  font-size: 10px;
+}
+
+header {
+  height: 100vh;
+}
+
+nav {
+  display: none;
+}
+
+/* ============= [ HEADER ] =============== */
+header {
+height: 100vh;
+}
+
+.name {
+  align-self: center;
+}
+
+.job-title {
+  align-self: center;
+}
+/* =============== [ ABOUT ] ================== */
+
+/* =============== [ SKILLS ] ================= */
+/* =============== [ PROJECTS ] =============== */
+
+.project-container-img img{
+  transform: scale(.5);
+}
+
+/* =============== [ CONTACT ] ================ */
+/* ============= [ BURGER MENU ] ============== */
 }
