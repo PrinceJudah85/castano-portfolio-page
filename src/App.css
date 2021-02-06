@@ -885,6 +885,8 @@ h2 {
 }
 
 .project-description p {
+  font-size: 1.75rem;
+  line-height: 2.4rem;
   padding: 4%;
 }
 
