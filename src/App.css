@@ -223,7 +223,7 @@ nav ul a:hover {
 .about-right p {
   font-style: italic;
   font-size: 1.125rem;
-  line-height: 1.45em;
+  line-height: 1.3em;
   color: rgb(31, 30, 30);
   padding: 1em 1.6em 1em 1.6em;
 }
@@ -275,8 +275,8 @@ nav ul a:hover {
 
 .project-section {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project-container {
@@ -519,7 +519,7 @@ button,
 
 /* =========================== [Media Queries] ============================ */
 
-/* =========================== [ For Laptops ] =========================== */
+/* ========================== [ For Laptops ] ========================== */
 @media screen and (min-width: 1025px) and (max-width: 1441px) {
   /* =============== [Header] ================ */
   /* =============== [About] ================= */
@@ -683,14 +683,14 @@ button,
   } 
 
   /* =============== [ CONTACT ] ================ */
-  
+
   .icon-names {
     font-size: 1.5rem;
   }
 }
 
 /* ========= [ Ipad && X-Large Phones ] =========== */
-  @media screen and (min-width: 601px ) and (max-width: 768) {
+@media screen and (min-width: 601px ) and (max-width: 768) {
 /* =============== [ HEADER ] ================ */
 /* =============== [ NAVBAR ] ================ */
 /* ================ [ ABOUT ] ================ */
@@ -707,9 +707,11 @@ button,
   }
 }
 
-/* ================= [large phones] ================= */
-@media screen and (min-width: 320px) and (max-width: 600px) {
 
+/* ================= [LARGE PHONES] ================= */
+@media screen and (max-width: 600px) {
+
+/* ============= [ Burger Menu ] ============== */
 /* Position and sizing of burger button */
 .bm-burger-button {
   display: inline-block;
@@ -769,6 +771,8 @@ button,
   display: inline-block;
 }
 
+/* ================ [ ROOT ] ================= */
+
 html,
 body {
   font-size: 10px;
@@ -782,7 +786,7 @@ nav {
   display: none;
 }
 
-/* ============= [ HEADER ] =============== */
+/* ================ [ HEADER ] ================= */
 header {
 height: 100vh;
 }
@@ -794,15 +798,323 @@ height: 100vh;
 .job-title {
   align-self: center;
 }
+
+h2 {
+  font-size: 2.6rem
+}
 /* =============== [ ABOUT ] ================== */
+.about {
+  height: 56vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-section {
+  margin-top: 2vh;
+  height: 50vh;
+}
+
+.about-section p {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.about-left img {
+  width: 96%;
+}
+
+.about-right {
+  padding: 0;
+}
 
 /* =============== [ SKILLS ] ================= */
+.skills-section {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skills-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 28vh;
+  padding-top: 4%;
+  padding-bottom: 6%;
+  width: 90%;
+}
+
+.skills-bar {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.skills-bar img {
+  width: 3.8rem;
+}
+
+.skills-icon {
+  padding: 2.5vw;
+}
+
+.hover-icon-effect::after {
+  content: '';
+  display: none;
+}
+
 /* =============== [ PROJECTS ] =============== */
+.project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5%;
+  width: 80vw;
+  height: auto;
+  border-radius: 1.25em;
+  box-shadow: 0 3px 1.25em 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  margin-bottom: 8vh;
+}
+
+.project-description {
+  border-top: 1px solid rgba(78,82,85,.3);
+  border-bottom: 1px solid rgba(78, 82, 85, 0.3);
+  height: auto;
+}
+
+.project-description p {
+  padding: 4%;
+}
+
+.project-container-img { 
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+  margin-top: -3.5vh;
+  padding-bottom: 2.3vh;
+}
 
 .project-container-img img{
-  transform: scale(.5);
+  transform: scale(.7);
+}
+
+.project-container-img .overlay-icons {
+  display: flex;
+  flex-direction: row;
+  top: 76.5%;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.overlay-icons a::after {
+  content: '';
+  display: block;
+  border-top: 1px solid black;
+}
+
+.overlay-icons a:last-child {
+  left: -86px;
+}
+
+.overlay-icons a:first-child::after {
+  content: "Website";
+  font-size: 1.1rem;
+  font-weight: 500;
+  top: 40%;
+  left: 7.5rem;
+  letter-spacing: .05em;
+}
+
+.overlay-icons a:last-child::after {
+  content: "GitHub";
+  font-size: 1.1rem;
+  font-weight: 500;
+  top: 40%;
+  left: -4rem;
+  letter-spacing: .05em;
+}
+
+.overlay-icons a:first-child:hover::after {
+  content: "";
+}
+
+.overlay-icons a:last-child:hover::after {
+  content: "";
+}
+
+.overlay-icons a > img {
+  width: 7rem;
+}
+
+.project-icon-bar img {
+  width: 3.5em;
 }
 
 /* =============== [ CONTACT ] ================ */
+.contact-main {
+  margin-top: 8vh;
+  width: 60vw;
+}
 /* ============= [ BURGER MENU ] ============== */
 }
+
+
+/* ============= [ SMALL PHONES ] ============= */
+@media screen and (max-width: 424px) {
+  html, body {font-size: 10px}
+/* ================ [ ROOT ] ================== */
+/* =============== [ HEADER ] ================= */
+/* =============== [ ABOUT ] ================== */
+.about {
+  background: #e2edda;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr;
+  width: 90vw;
+  box-shadow: 0 0 0 0 #000;
+  margin-top: 0;
+}
+
+.about-left {
+  width: 80vw;
+  justify-self: center;
+  align-self: center;
+  background: transparent;
+}
+
+.about-left img {
+  display: inline-block;
+  padding-bottom: 1.5rem;
+  border-radius: 6px;
+}
+
+.about-right {
+  border-radius: 8px;
+  width: 90vw;
+}
+
+.about-right p{
+  font-size: 1.5rem;
+  line-height: 1.3em;
+  padding: 1rem 1.2rem;
+  border-left: 2px solid #ed462f;
+}
+/* =============== [ SKILLS ] ================= */
+
+.skills-section {
+  height: 45vh;
+  justify-content: flex-end;
+  background: #e2edda;
+  padding-bottom: 4rem;
+}
+
+.skills-display {
+  height: 23vh;
+  padding-bottom: 2%;
+}
+
+.skills-bar img {
+  width: 3.75rem;
+}
+
+.skills-icon {
+  padding: 2.2vw;
+}
+
+/* =============== [ PROJECTS ] =============== */
+.project-container-img img{
+  transform: scale(.6);
+}
+
+.project-container-img .overlay-icons {
+  top: 73%;
+  transform: scale(1.125);
+}
+
+.overlay-icons a:first-child::after {
+  content: "Website";
+  left: 6.5rem;
+}
+
+.overlay-icons a:last-child::after {
+  content: "GitHub";
+  left: -3.4rem;
+}
+
+#projects {
+  background: #e2edda;
+}
+
+.project-section-header {
+  background: #e2edda;
+  padding-bottom: 1rem;
+}
+
+.project-section {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 75vh;
+}
+
+.project-section:first-child {
+  margin-top: 4rem;
+}
+
+.project-section .project-container {
+  justify-self: center;
+}
+/* =============== [ CONTACT ] ================ */
+}
+
+/* ============= [ SMALL PHONES ] ============= */
+@media screen and (max-width: 370px) {
+  /* ================ [ ROOT ] ================== */
+  /* =============== [ HEADER ] ================= */
+  /* =============== [ ABOUT ] ================== */
+  /* =============== [ SKILLS ] ================= */
+
+  .skills-bar img {
+    width: 3rem;
+  }
+  
+  .skills-icon {
+    padding: 2.2vw;
+  }
+  /* =============== [ PROJECTS ] =============== */
+
+  .project-container-img img{
+    transform: scale(.5);
+  }
+
+  .project-container-img .overlay-icons {
+    top: 67.5%;
+    transform: scale(1.1);
+  }
+
+  .overlay-icons a:first-child::after {
+    content: "Website";
+    left: 1.3rem;
+    top: 85%;
+  }
+  
+  .overlay-icons a:last-child::after {
+    content: "GitHub";
+    left: 1.5rem;
+    top: 85%;
+  }
+  /* =============== [ CONTACT ] ================ */
+  }
+
+@media screen and (max-width: 340px) {
+  /* ================ [ ROOT ] ================== */
+  /* =============== [ HEADER ] ================= */
+  /* =============== [ ABOUT ] ================== */
+  /* =============== [ SKILLS ] ================= */
+  /* =============== [ PROJECTS ] =============== */
+  /* =============== [ CONTACT ] ================ */
+  }
