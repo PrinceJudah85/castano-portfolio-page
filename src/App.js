@@ -13,7 +13,6 @@ import { stacks } from './svg-icons';
 import BurgerMenu from './components/BurgerMenu'; // Burger Menu Class Component
 
 function App () {
-
     return (
       <>
         <BurgerMenu pageWrapId={'page-wrap'} />

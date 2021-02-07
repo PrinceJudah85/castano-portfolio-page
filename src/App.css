@@ -61,7 +61,7 @@ h3 {
 /* https://i.imgur.com/tAqcZat.jpg?1 */
 /* image url: /resources/css/hero-img.jpg  */
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, 0.6)),
     url('./images/hero-img.png'); 
   background-size: cover;
   background-repeat: no-repeat;
@@ -275,8 +275,8 @@ nav ul a:hover {
 
 .project-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .project-container {
@@ -342,6 +342,7 @@ nav ul a:hover {
   align-items: center;
   position: relative;
   overflow: hidden;
+  object-fit: contain;
 }
 
 .project-img img{ 
@@ -525,12 +526,8 @@ button,
   /* =============== [About] ================= */
   /* ============== [Projects] =============== */
   .project-container-img img{
-    overflow: visible; 
-  }
-
-  .project-container-img img {
-    transform: scale(.9);
-    width: inherit;
+    transform: scale(.8);
+    overflow: visible;
   }
 
   .overlay-icons a{
@@ -538,7 +535,7 @@ button,
    }
  
   .project-container-img .overlay-icons {
-    top: 3rem;
+    top: calc(auto / 2);
   }
 }
 
@@ -581,7 +578,11 @@ button,
     padding-bottom: 14%;
   }
   /* ================ [ PROJECTS ] ================= */
-  .project-section {opacity: 1;}
+  .project-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   
   .project-container {
     display: grid;
@@ -605,8 +606,8 @@ button,
   }
 
   .project-container-img img{
-    transform: scale(.58);
-  }
+    transform: scale(.6);
+  } 
   
   .project-description {
     grid-area: description;
@@ -638,10 +639,14 @@ button,
     width: 90%;
   }
 
+  .project-icon-bar img {
+    width: 3em;
+  }
+
   .project-container-img .overlay-icons {
     opacity: 1;
-    top: 93%;
-    transform: scale(1.15);
+    top: 83%;
+    transform: scale(1.4);
   }
 
   .overlay-icons a:first-child::after {
@@ -665,12 +670,15 @@ button,
     font-size: 1.3vw;
     top: 4em;
     left: .75em;
+    font-weight: bold;
   }
   
   .overlay-icons a:last-child:hover::after {
     content: "GitHub";
     position: absolute;
-    top: 4em;
+    top: 3.3em;
+    left: .75em;
+    font-weight: bold;
   }
 
   .project-container-img:hover .project-img img{
@@ -701,13 +709,19 @@ button,
     transform: scale(.5);
   }
 
+  .project-icon-bar img {
+    width: 3.5em;
+  }
+
+  .overlay-icons a > img {
+    width: 10vw;
+}
+
 /* =============== [ CONTACT ] ================= */
   .contact-main {
     width: 32vw;
   }
 }
-
-
 /* ================= [LARGE PHONES] ================= */
 @media screen and (max-width: 600px) {
 
@@ -788,7 +802,9 @@ nav {
 
 /* ================ [ HEADER ] ================= */
 header {
-height: 100vh;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.3)),
+    url('./images/mobile-hero-image.png'); 
 }
 
 .name {
@@ -839,11 +855,9 @@ h2 {
 .skills-display {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  height: 28vh;
-  padding-top: 4%;
-  padding-bottom: 6%;
-  width: 90%;
+  height: 30vh;
+  padding-top: 2%;
+  padding-bottom: 4%;
 }
 
 .skills-bar {
@@ -966,10 +980,13 @@ h2 {
 /* ============= [ SMALL PHONES ] ============= */
 @media screen and (max-width: 424px) {
   html, body {font-size: 10px}
+  .section {height: 0;}
 /* ================ [ ROOT ] ================== */
 /* =============== [ HEADER ] ================= */
 /* =============== [ ABOUT ] ================== */
 .about {
+  height: 68vh;
+  justify-content: flex-start;
   background: #e2edda;
 }
 
@@ -980,43 +997,46 @@ h2 {
   width: 90vw;
   box-shadow: 0 0 0 0 #000;
   margin-top: 0;
+  height: 63vh;
 }
 
 .about-left {
-  width: 80vw;
+  width: 75vw;
   justify-self: center;
-  align-self: center;
+  align-self: flex-start;
   background: transparent;
 }
 
 .about-left img {
   display: inline-block;
-  padding-bottom: 1.5rem;
-  border-radius: 6px;
+  margin-top: -.4rem;
+  border-radius: 30px;
+  width: 80%;
 }
 
 .about-right {
-  border-radius: 8px;
+  border-radius: 2%;
   width: 90vw;
+  padding: 0;
 }
 
 .about-right p{
   font-size: 1.5rem;
   line-height: 1.3em;
-  padding: 1rem 1.2rem;
+  padding: 1.2rem;
   border-left: 2px solid #ed462f;
 }
 /* =============== [ SKILLS ] ================= */
 
 .skills-section {
-  height: 45vh;
+  height: auto;
   justify-content: flex-end;
   background: #e2edda;
-  padding-bottom: 4rem;
+  padding-top: 3vh;
 }
 
 .skills-display {
-  height: 23vh;
+  height: 22vh;
   padding-bottom: 2%;
 }
 
@@ -1025,10 +1045,11 @@ h2 {
 }
 
 .skills-icon {
-  padding: 2.2vw;
+  padding: 1.1vw;
 }
 
 /* =============== [ PROJECTS ] =============== */
+
 .project-container-img img{
   transform: scale(.6);
 }
@@ -1089,6 +1110,12 @@ h2 {
   }
   /* =============== [ PROJECTS ] =============== */
 
+  .project-description p {
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+    padding: 4%;
+} 
+
   .project-container-img img{
     transform: scale(.5);
   }
@@ -1109,14 +1136,5 @@ h2 {
     left: 1.5rem;
     top: 85%;
   }
-  /* =============== [ CONTACT ] ================ */
-  }
-
-@media screen and (max-width: 340px) {
-  /* ================ [ ROOT ] ================== */
-  /* =============== [ HEADER ] ================= */
-  /* =============== [ ABOUT ] ================== */
-  /* =============== [ SKILLS ] ================= */
-  /* =============== [ PROJECTS ] =============== */
   /* =============== [ CONTACT ] ================ */
   }
