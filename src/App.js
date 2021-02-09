@@ -10,7 +10,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import { stacks } from './svg-icons';
 import BurgerMenu from './components/BurgerMenu'; // Burger Menu Class Component
-// import Burger from './components/Burger'; // Burger Menu Functional Component (Not in use)
+//import Burger from './components/Burger'; // Burger Menu Functional Component (Not in use)
 
 function App () {
   return (

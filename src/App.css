@@ -222,6 +222,7 @@ nav ul a:hover {
 }
 
 /* ============================= [ SKILLS ] ============================== */
+
 .skills-section {
   background: #849b67;
   padding-top: 1%
@@ -260,6 +261,7 @@ nav ul a:hover {
 }
 
 /* ============================= [ PROJECTS ] ============================= */
+
 .project-section-header {
   background: #849b67;
 }
@@ -375,6 +377,7 @@ nav ul a:hover {
 }
 
 /* ==================== [Hover Effect over Projects] ====================== */
+
 .overlay-icons a:first-child:hover,
 .overlay-icons a:last-child:hover {
     transform: scale(1.2);
@@ -438,6 +441,7 @@ nav ul a:hover {
 }
 
 /* =========================== [ CONTACT ] ============================ */
+
 section.contact-section {
   display: flex;
   justify-content: center;
@@ -492,11 +496,13 @@ section.contact-section {
 }
 
 /* ========================= [ FOOTER ] ========================= */
+
 .footer-section {
   text-align: center;
 }
 
 /* ========================= [ Burger Menu ] ==================== */
+
 .bm-menu-wrap,
 .bm-overlay,
 .bm-burger-button {
@@ -603,7 +609,9 @@ section.contact-section {
 
 /* ========================== [ For Laptops ] ========================== */
 @media screen and (min-width: 1025px) and (max-width: 1441px) {
+
   /* ============== [Projects] =============== */
+
   .project-container-img img{
     transform: scale(.8);
     overflow: visible;
@@ -624,18 +632,25 @@ section.contact-section {
 
 /* =========================== [ For iPod Pro ] =========================== */
 @media screen and (max-width: 1024px) {
+
   h3 {
     font-size: 2.5rem;
   }
+
   /* ================ [ HEADER ] ================= */
+
   header {
     height: 92vh;
   }
+
   /* ================ [ NAVBAR ] ================= */
+
   nav ul a {
     font-size: 2.7rem;
   }
+
   /* ================= [ ABOUT ] ================== */
+
   .about-left img {
     width: 90%;
   }
@@ -646,6 +661,7 @@ section.contact-section {
   }
 
   /* ================ [ PROJECTS ] ================= */
+
   .project-section {
     display: flex;
     flex-direction: column;
@@ -767,9 +783,11 @@ section.contact-section {
 }
 /* ========= [ Ipad && X-Large Phones ] =========== */
 @media screen and (min-width: 601px ) and (max-width: 768) {
+
   h3 {
     font-size: 3rem;
   }
+
 /* =============== [ HEADER ] ================ */
 /* =============== [ NAVBAR ] ================ */
 /* ================ [ ABOUT ] ================ */
@@ -798,6 +816,7 @@ section.contact-section {
 @media screen and (max-width: 600px) {
 
 /* ================ [ ROOT ] ================= */
+
 html,
 body {
   font-size: 10px;
@@ -841,6 +860,7 @@ h2 {
 }
 
 /* =============== [ ABOUT ] ================== */
+
 .about {
   height: auto;
   justify-content: space-between;
@@ -889,6 +909,7 @@ h2 {
 }
 
 /* =============== [ SKILLS ] ================= */
+
 .skills-section {
   padding: 2vh 0;
   height: auto;
@@ -923,6 +944,7 @@ h2 {
 }
 
 /* =============== [ PROJECTS ] =============== */
+
 .project-section-header {
   background: linear-gradient(180deg, rgba(132,155,103,1) 0%, rgba(141,164,114,1) 15%, rgba(157,180,133,1) 43%, rgba(162,185,139,1) 52%, rgba(167,190,145,1) 61%, rgba(172,195,151,1) 69%, rgba(177,200,157,1) 77%, rgba(181,204,162,1) 84%, rgba(184,208,166,1) 90%, rgba(190,214,173,1) 100%);
 }
@@ -1019,6 +1041,7 @@ h2 {
 }
 
 /* =============== [ CONTACT ] ================ */
+
 section.contact-section {
   height: 100vh;
   padding-bottom: 0;
@@ -1057,8 +1080,11 @@ section.contact-section {
 
 /* ============= [ SMALL PHONES ] ============= */
 @media screen and (max-width: 410px) {
-  html, body {font-size: 10px}
+
 /* ================ [ ROOT ] ================== */
+
+html, body {font-size: 10px}
+
 /* =============== [ HEADER ] ================= */
 /* =============== [ ABOUT ] ================== */
 
@@ -1132,18 +1158,21 @@ section.contact-section {
   width: 90vw;
   justify-self: center;
 }
-/* =============== [ CONTACT ] ================ */
+
 }
 
-/* ============= [ SMALL PHONES ] ============= */
+/* ============== [ SMALL PHONES ] =============== */
 @media screen and (max-width: 380px) {
+
   /* ================ [ ROOT ] ================== */
   /* =============== [ HEADER ] ================= */
   /* =============== [ ABOUT ] ================== */
+
   .about-left img {
     max-width: 60vw;
     width: auto;
   }
+
   /* =============== [ SKILLS ] ================= */
 
   .skills-bar img {
@@ -1153,14 +1182,14 @@ section.contact-section {
   .skills-icon {
     padding: 2vw;
   }
-  
+
   /* =============== [ PROJECTS ] =============== */
 
   .project-description p {
     font-size: 1.3rem;
     line-height: 2.4rem;
     padding: 4%;
-} 
+  } 
 
   .project-container-img img{
     transform: scale(.55);
@@ -1182,5 +1211,4 @@ section.contact-section {
     left: 1.5rem;
     top: 85%;
   }
-
-  }
+}
