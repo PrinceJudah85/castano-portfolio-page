@@ -245,7 +245,6 @@ nav ul a:hover {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  /* width: 80%; */
   width: auto;
   background: #333;
   position: relative;
@@ -604,8 +603,6 @@ section.contact-section {
 
 /* ========================== [ For Laptops ] ========================== */
 @media screen and (min-width: 1025px) and (max-width: 1441px) {
-  /* =============== [Header] ================ */
-  /* =============== [About] ================= */
   /* ============== [Projects] =============== */
   .project-container-img img{
     transform: scale(.8);
@@ -630,7 +627,6 @@ section.contact-section {
   h3 {
     font-size: 2.5rem;
   }
-
   /* ================ [ HEADER ] ================= */
   header {
     height: 92vh;
@@ -648,7 +644,7 @@ section.contact-section {
     font-size: 1.4rem;
     line-height: 1.8rem;
   }
-  /* ================= [ SKILLS ] ================= */
+
   /* ================ [ PROJECTS ] ================= */
   .project-section {
     display: flex;
@@ -722,52 +718,53 @@ section.contact-section {
 
   .overlay-icons a:first-child::after {
     content: "Website";
-    font-size: 1.3vw;
-    position: absolute;
-    top: 4em;
     left: .5em;
   }
 
   .overlay-icons a:last-child::after {
     content: "GitHub";
-    position: absolute;
-    top: 4em;
     left: .75em;
+  }
+
+  .overlay-icons a:first-child::after,
+  .overlay-icons a:last-child::after {
     font-size: 1.3vw;
+    top: 4em;
+    position: absolute;
   }
 
   .overlay-icons a:first-child:hover::after {
     content: "Website";
     font-size: 1.3vw;
     top: 4em;
-    left: .75em;
-    font-weight: bold;
   }
   
   .overlay-icons a:last-child:hover::after {
     content: "GitHub";
-    position: absolute;
     top: 3.3em;
-    left: .75em;
+  }
+
+  .overlay-icons a:first-child:hover::after,
+  .overlay-icons a:last-child:hover::after {
     font-weight: bold;
+    left: .75em;
   }
 
   .project-container-img:hover .project-img img{
     filter: brightness(100%);
-    opacity: 1;
   }
-  
-  .project-container-img:hover .overlay-icons {
+
+  .project-container-img:hover .project-img img,
+  .project-container-img:hover,
+  .overlay-icons {
     opacity: 1;
   } 
 
-  /* =============== [ CONTACT ] ================ */
-
+/* =============== [ CONTACT ] ================ */
   .icon-names {
     font-size: 1.5rem;
   }
 }
-
 /* ========= [ Ipad && X-Large Phones ] =========== */
 @media screen and (min-width: 601px ) and (max-width: 768) {
   h3 {
@@ -796,11 +793,11 @@ section.contact-section {
     width: 32vw;
   }
 }
+
 /* ================= [LARGE PHONES] ================= */
 @media screen and (max-width: 600px) {
 
 /* ================ [ ROOT ] ================= */
-
 html,
 body {
   font-size: 10px;
@@ -814,6 +811,10 @@ header {
 
 #navbar {
   display: none;
+}
+
+h2 {
+  font-size: 2.6rem
 }
 
 /* ================ [ HEADER ] ================= */
@@ -839,9 +840,6 @@ header {
   align-self: center;
 }
 
-h2 {
-  font-size: 2.6rem
-}
 /* =============== [ ABOUT ] ================== */
 .about {
   height: auto;
@@ -991,27 +989,24 @@ h2 {
 
 .overlay-icons a:first-child::after {
   content: "Website";
-  font-size: 1.3rem;
-  font-weight: 500;
-  top: 40%;
   left: 7.5rem;
-  letter-spacing: .05em;
 }
 
 .overlay-icons a:last-child::after {
   content: "GitHub";
+  left: -4.5rem;
+}
+
+.overlay-icons a:first-child::after,
+.overlay-icons a:last-child::after {
   font-size: 1.3rem;
   font-weight: 500;
   top: 40%;
-  left: -4.5rem;
   letter-spacing: .05em;
 }
 
+.overlay-icons a:last-child:hover::after,
 .overlay-icons a:first-child:hover::after {
-  content: "";
-}
-
-.overlay-icons a:last-child:hover::after {
   content: "";
 }
 
@@ -1066,6 +1061,7 @@ section.contact-section {
 /* ================ [ ROOT ] ================== */
 /* =============== [ HEADER ] ================= */
 /* =============== [ ABOUT ] ================== */
+
 .about-right p {
   font-size: 1.3em;
   padding: 0;
@@ -1076,6 +1072,7 @@ section.contact-section {
   min-width: 60vw;
   width: auto;
 }
+
 /* =============== [ SKILLS ] ================= */
 
 .skills-section {
@@ -1112,12 +1109,12 @@ section.contact-section {
   left: -3.4rem;
 }
 
+.project-section-header,
 #projects {
   background: #849b67;
 }
 
 .project-section-header {
-  background: #849b67;
   padding-bottom: 1rem;
 }
 
@@ -1156,6 +1153,7 @@ section.contact-section {
   .skills-icon {
     padding: 2vw;
   }
+  
   /* =============== [ PROJECTS ] =============== */
 
   .project-description p {
