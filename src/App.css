@@ -55,8 +55,8 @@ h3 {
 
 /* ===================== [ HEADER ] ======================= */
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, 0.6)),
-    url('./images/hero-img.png'); 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./images/hero-img.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -73,7 +73,7 @@ header {
 }
 
 .name {
-  margin-left: 5vw; 
+  margin-left: 5vw;
 }
 
 .job-title {
@@ -125,7 +125,7 @@ header {
 
 .first-initials {
   font-size: 9vw;
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
   opacity: 0;
 }
 
@@ -135,7 +135,7 @@ header {
 
 .name-end {
   font-size: 7vw;
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
   opacity: 0;
 }
 
@@ -155,7 +155,7 @@ nav ul {
   list-style-type: none;
 }
 
-nav ul a { 
+nav ul a {
   font-size: 1.5rem;
   font-weight: 300;
   color: white;
@@ -225,7 +225,7 @@ nav ul a:hover {
 
 .skills-section {
   background: #849b67;
-  padding-top: 1%
+  padding-top: 1%;
 }
 
 .skills-display {
@@ -277,7 +277,7 @@ nav ul a:hover {
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 5%;
-  width: 28vw; 
+  width: 28vw;
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 1.25em;
@@ -299,15 +299,15 @@ nav ul a:hover {
   text-align: center;
   align-items: center;
   padding: 2%;
-  border-top: 1px solid rgba(78,82,85,.3);
+  border-top: 1px solid rgba(78, 82, 85, 0.3);
   border-bottom: 1px solid rgba(78, 82, 85, 0.3);
   line-height: 1.4em;
   height: auto;
-  min-height: 21vh; 
+  min-height: 21vh;
 }
 
 .project-icon-bar {
-  display: flex; 
+  display: flex;
   justify-content: space-evenly;
   position: relative;
   height: inherit;
@@ -318,11 +318,11 @@ nav ul a:hover {
   width: 2.5em;
 }
 
-.project-description p{
+.project-description p {
   font-family: "Roboto", helvetica;
   font-weight: 400;
-  font-size: .9rem;
-  letter-spacing: .02rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.02rem;
 }
 
 #projects {
@@ -330,7 +330,7 @@ nav ul a:hover {
   background: #849b67;
 }
 
-.project-container-img { 
+.project-container-img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -342,9 +342,9 @@ nav ul a:hover {
   object-fit: contain;
 }
 
-.project-img img{ 
+.project-img img {
   border-radius: 1em;
-  border: 1px solid rgba(78, 82, 85, .6);
+  border: 1px solid rgba(78, 82, 85, 0.6);
 }
 
 .project-container-img .overlay-icons {
@@ -355,11 +355,11 @@ nav ul a:hover {
   opacity: 0;
 }
 
-.overlay-icons a{
- display: inline-block;
- color: black;
- text-decoration: none;
- font-size: 2rem;
+.overlay-icons a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  font-size: 2rem;
 }
 
 .overlay-icons a > img {
@@ -380,8 +380,8 @@ nav ul a:hover {
 
 .overlay-icons a:first-child:hover,
 .overlay-icons a:last-child:hover {
-    transform: scale(1.2);
-  }
+  transform: scale(1.2);
+}
 
 .overlay-icons a:first-child:hover::after {
   content: "Website";
@@ -395,14 +395,14 @@ nav ul a:hover {
   font-size: 1.5vw;
 }
 
-.project-container-img:hover .project-img img{
+.project-container-img:hover .project-img img {
   filter: brightness(25%);
-  opacity: .3;
+  opacity: 0.3;
 }
 
 .project-container-img:hover .overlay-icons {
   opacity: 1;
-} 
+}
 
 /* ==================== [Hover Effect over languages] ===================== */
 .hover-icon-effect::after {
@@ -411,8 +411,8 @@ nav ul a:hover {
   position: absolute;
   border-radius: 5px;
   height: fit-content;
-  font-size: .7em;
-  padding: .2em .4em;
+  font-size: 0.7em;
+  padding: 0.2em 0.4em;
   color: rgb(245, 241, 241);
   background: rgb(26, 25, 25);
   transform: scale(0);
@@ -421,12 +421,12 @@ nav ul a:hover {
 .skills-icon::after {
   bottom: -60%;
   transition: transform ease 40ms;
-  transition-delay: .7s;
+  transition-delay: 0.7s;
 }
 
 .project-icon::after {
   bottom: 0;
-  transition: transform ease .3s;
+  transition: transform ease 0.3s;
 }
 
 .skills-icon:hover::after,
@@ -460,7 +460,7 @@ section.contact-section {
 .contact-title {
   background-color: #849b67;
   border-radius: 1.25em 1.25em 0 0;
-  padding: .5em;
+  padding: 0.5em;
 }
 
 .contact-flex {
@@ -511,118 +511,117 @@ section.contact-section {
 
 @media screen and (max-width: 600px) {
   /* Position and sizing of burger button */
-.bm-burger-button {
-  display: inline-block;
-  position: fixed;
-  top: 3vh;
-  right: 3vw;
-  width: 9vw;
-  height: 4vh;
-}
+  .bm-burger-button {
+    display: inline-block;
+    position: fixed;
+    top: 3vh;
+    right: 3vw;
+    width: 9vw;
+    height: 4vh;
+  }
 
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background:#fbce33;
-}
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: #fbce33;
+  }
 
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  font-weight: bold;
-}
+  /* Color/shape of burger icon bars on hover*/
+  .bm-burger-bars-hover {
+    font-weight: bold;
+  }
 
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  /* display: inline-block; */
-  height: 1rem;
-  width: 1rem;
-  background: #ed462f;
-}
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    /* display: inline-block; */
+    height: 1rem;
+    width: 1rem;
+    background: #ed462f;
+  }
 
-/* Color/shape of close button cross */
-.bm-cross {
-  background: black;
-}
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: black;
+  }
 
-/* Sidebar wrapper styles */
-.bm-menu-wrap {
-  display: block;
-  height: auto !important;
-  width: auto !important;
-  opacity: .9;
-}
+  /* Sidebar wrapper styles */
+  .bm-menu-wrap {
+    display: block;
+    height: auto !important;
+    width: auto !important;
+    opacity: 0.9;
+  }
 
-/* General Sidebar styles */
-.bm-menu {
-  display: block;
-  background: #fbce33;
-  padding: 1rem;
-}
+  /* General Sidebar styles */
+  .bm-menu {
+    display: block;
+    background: #fbce33;
+    padding: 1rem;
+  }
 
-/* Wrapper for item list */
-.bm-item-list {
-  color: white;
-  font-size: 1rem;
-  padding: .6rem;
-  text-align: center;
-  margin-top: 3.6vh;
-  background: #849b67;
-  height: 86% !important;
-}
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: white;
+    font-size: 1rem;
+    padding: 0.6rem;
+    text-align: center;
+    margin-top: 3.6vh;
+    background: #849b67;
+    height: 86% !important;
+  }
 
-.bm-item-list a {
-  text-decoration: none;
-  color: white;
-  font-size: 3rem;
-  border-bottom: 2px solid white;
-  padding: .7rem;
-}
+  .bm-item-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+    border-bottom: 2px solid white;
+    padding: 0.7rem;
+  }
 
-.bm-item-list a:active {
-  background: #ed462f;
-  font-weight: bold;
-}
+  .bm-item-list a:active {
+    background: #ed462f;
+    font-weight: bold;
+  }
 
-.bm-item-list a:visited {
-  text-decoration: none;
-}
+  .bm-item-list a:visited {
+    text-decoration: none;
+  }
 
-.bm-item-list a:first-child {
-  padding-top: .75rem;
-}
+  .bm-item-list a:first-child {
+    padding-top: 0.75rem;
+  }
 
-/* Individual item */
-.bm-item {
-  display: grid !important;
-  grid-template-rows: repeat(4, 1fr);
-  grid-gap: .75vh;
-  border: 2px solid white;
-  border-bottom: none;
-}
+  /* Individual item */
+  .bm-item {
+    display: grid !important;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 0.75vh;
+    border: 2px solid white;
+    border-bottom: none;
+  }
 
-/* Styling of overlay */
-.bm-overlay {
-  display: none;
-}
+  /* Styling of overlay */
+  .bm-overlay {
+    display: none;
+  }
 }
 
 /* =========================== [Media Queries] ============================ */
 
 /* ========================== [ For Laptops ] ========================== */
 @media screen and (min-width: 1025px) and (max-width: 1441px) {
-
   /* ============== [Projects] =============== */
 
-  .project-container-img img{
-    transform: scale(.8);
+  .project-container-img img {
+    transform: scale(0.8);
     overflow: visible;
   }
 
-  .overlay-icons a{
+  .overlay-icons a {
     font-size: 2.2vw;
-   }
- 
+  }
+
   .project-container-img .overlay-icons {
-    top: 50%;
+    top: calc(auto/2);
   }
 
   .project-description {
@@ -632,7 +631,6 @@ section.contact-section {
 
 /* =========================== [ For iPod Pro ] =========================== */
 @media screen and (max-width: 1024px) {
-
   h3 {
     font-size: 2.5rem;
   }
@@ -667,15 +665,15 @@ section.contact-section {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .project-container {
     display: grid;
     grid-template-columns: 50% 1fr;
     grid-template-rows: 12% 70% 20%;
-    grid-template-areas: 
-    "header header"
-    "image description"
-    ". icons";
+    grid-template-areas:
+      "header header"
+      "image description"
+      ". icons";
     width: 95%;
   }
 
@@ -689,10 +687,10 @@ section.contact-section {
     position: relative;
   }
 
-  .project-container-img img{
-    transform: scale(.6);
-  } 
-  
+  .project-container-img img {
+    transform: scale(0.6);
+  }
+
   .project-description {
     grid-area: description;
     border-top: none;
@@ -706,18 +704,18 @@ section.contact-section {
   }
 
   .project-description::before {
-    content: '';
+    content: "";
     display: block;
     padding-right: 1.3rem;
     height: 100%;
-    border-left: 1px solid rgba(78,82,85,.2);
+    border-left: 1px solid rgba(78, 82, 85, 0.2);
   }
 
   .project-icon-bar {
     grid-area: icons;
     justify-self: stretch;
     align-self: start;
-    border-top: 1px solid rgba(78,82,85,.2);
+    border-top: 1px solid rgba(78, 82, 85, 0.2);
     margin: 0 1rem;
     width: 90%;
   }
@@ -734,12 +732,12 @@ section.contact-section {
 
   .overlay-icons a:first-child::after {
     content: "Website";
-    left: .5em;
+    left: 0.5em;
   }
 
   .overlay-icons a:last-child::after {
     content: "GitHub";
-    left: .75em;
+    left: 0.75em;
   }
 
   .overlay-icons a:first-child::after,
@@ -754,7 +752,7 @@ section.contact-section {
     font-size: 1.3vw;
     top: 4em;
   }
-  
+
   .overlay-icons a:last-child:hover::after {
     content: "GitHub";
     top: 3.3em;
@@ -763,10 +761,10 @@ section.contact-section {
   .overlay-icons a:first-child:hover::after,
   .overlay-icons a:last-child:hover::after {
     font-weight: bold;
-    left: .75em;
+    left: 0.75em;
   }
 
-  .project-container-img:hover .project-img img{
+  .project-container-img:hover .project-img img {
     filter: brightness(100%);
   }
 
@@ -774,28 +772,27 @@ section.contact-section {
   .project-container-img:hover,
   .overlay-icons {
     opacity: 1;
-  } 
+  }
 
-/* =============== [ CONTACT ] ================ */
+  /* =============== [ CONTACT ] ================ */
   .icon-names {
     font-size: 1.5rem;
   }
 }
 /* ========= [ Ipad && X-Large Phones ] =========== */
-@media screen and (min-width: 601px ) and (max-width: 768) {
-
+@media screen and (min-width: 601px) and (max-width: 768) {
   h3 {
     font-size: 3rem;
   }
 
-/* =============== [ HEADER ] ================ */
-/* =============== [ NAVBAR ] ================ */
-/* ================ [ ABOUT ] ================ */
-/* ================ [ SKILLS ] =============== */
-/* ============== [ PROJECTS ] =============== */
+  /* =============== [ HEADER ] ================ */
+  /* =============== [ NAVBAR ] ================ */
+  /* ================ [ ABOUT ] ================ */
+  /* ================ [ SKILLS ] =============== */
+  /* ============== [ PROJECTS ] =============== */
 
   .project-container-img img {
-    transform: scale(.5);
+    transform: scale(0.5);
   }
 
   .project-icon-bar img {
@@ -804,9 +801,9 @@ section.contact-section {
 
   .overlay-icons a > img {
     width: 10vw;
-}
+  }
 
-/* =============== [ CONTACT ] ================= */
+  /* =============== [ CONTACT ] ================= */
   .contact-main {
     width: 32vw;
   }
@@ -814,356 +811,366 @@ section.contact-section {
 
 /* ================= [LARGE PHONES] ================= */
 @media screen and (max-width: 600px) {
+  /* ================ [ ROOT ] ================= */
 
-/* ================ [ ROOT ] ================= */
+  html,
+  body {
+    font-size: 10px;
+  }
 
-html,
-body {
-  font-size: 10px;
-}
+  header {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+      url("./images/mobile-hero-image.png");
+  }
 
-header {
-  height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.3)),
-    url('./images/mobile-hero-image.png'); 
-}
+  #navbar {
+    display: none;
+  }
 
-#navbar {
-  display: none;
-}
+  h2 {
+    font-size: 2.6rem;
+  }
 
-h2 {
-  font-size: 2.6rem
-}
+  /* ================ [ HEADER ] ================= */
+  .header-title {
+    transform: translate(0, 75%);
+  }
 
-/* ================ [ HEADER ] ================= */
-.header-title {
-  transform: translate(0, 75%);
-}
+  .first-initials {
+    font-size: 11vw;
+  }
 
-.first-initials {
-  font-size: 11vw;
-}
+  .name-end {
+    font-size: 9vw;
+    letter-spacing: 0.15rem;
+    opacity: 0;
+  }
 
-.name-end {
-  font-size: 9vw;
-  letter-spacing: .15rem;
-  opacity: 0;
-}
+  .name {
+    align-self: center;
+  }
 
-.name {
-  align-self: center;
-}
+  .job-title {
+    align-self: center;
+  }
 
-.job-title {
-  align-self: center;
-}
+  /* =============== [ ABOUT ] ================== */
 
-/* =============== [ ABOUT ] ================== */
+  .about {
+    height: auto;
+    justify-content: space-between;
+    background: #849b67;
+  }
 
-.about {
-  height: auto;
-  justify-content: space-between;
-  background: #849b67;
-}
+  .about-section {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    box-shadow: 0 0 0 0 #000;
+    margin-top: 0;
+    height: auto;
+    max-height: 68vh;
+    min-height: 57vh;
+    grid-gap: 2vh;
+  }
 
-.about-section {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: auto auto;
-  justify-items: center;
-  box-shadow: 0 0 0 0 #000;
-  margin-top: 0;
-  height: auto;
-  max-height: 68vh;
-  min-height: 57vh;
-  grid-gap: 2vh;
-}
+  .about-left {
+    width: auto;
+    justify-self: center;
+    align-self: flex-start;
+    background: transparent;
+  }
 
-.about-left {
-  width: auto;
-  justify-self: center;
-  align-self: flex-start;
-  background: transparent;
-}
+  .about-left img {
+    display: inline-block;
+    border-radius: 30px;
+    max-width: 50vw;
+    width: auto;
+    border: 0.25rem solid #ed462f;
+    padding: 0;
+  }
 
-.about-left img {
-  display: inline-block;
-  border-radius: 30px;
-  max-width: 50vw;
-  width: auto;
-  border: 0.25rem solid #ed462f;
-  padding: 0;
-}
+  .about-right {
+    border-radius: 2%;
+    width: 90vw;
+    align-self: center;
+  }
 
-.about-right {
-  border-radius: 2%;
-  width: 90vw;
-  align-self: center;
-}
+  .about-right p {
+    font-size: 1.4rem;
+    line-height: 1.3em;
+    padding: 0.4em;
+  }
 
-.about-right p{
-  font-size: 1.4rem;
-  line-height: 1.3em;
-  padding: .4em;
-}
+  /* =============== [ SKILLS ] ================= */
 
-/* =============== [ SKILLS ] ================= */
+  .skills-section {
+    padding: 2vh 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-.skills-section {
-  padding: 2vh 0;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  .skills-display {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 2% 0;
+  }
 
-.skills-display {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  padding: 2% 0;
-}
+  .skills-bar {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
 
-.skills-bar {
-  display: inline-flex;
-  flex-wrap: wrap;
-}
+  .skills-bar img {
+    width: 3.25rem;
+  }
 
-.skills-bar img {
-  width: 3.25rem;
-}
+  .skills-icon {
+    padding: 1vw;
+  }
 
-.skills-icon {
-  padding: 1vw;
-}
+  .hover-icon-effect::after {
+    content: "";
+    display: none;
+  }
 
-.hover-icon-effect::after {
-  content: '';
-  display: none;
-}
+  /* =============== [ PROJECTS ] =============== */
 
-/* =============== [ PROJECTS ] =============== */
+  .project-section-header {
+    background: linear-gradient(
+      180deg,
+      rgba(132, 155, 103, 1) 0%,
+      rgba(141, 164, 114, 1) 15%,
+      rgba(157, 180, 133, 1) 43%,
+      rgba(162, 185, 139, 1) 52%,
+      rgba(167, 190, 145, 1) 61%,
+      rgba(172, 195, 151, 1) 69%,
+      rgba(177, 200, 157, 1) 77%,
+      rgba(181, 204, 162, 1) 84%,
+      rgba(184, 208, 166, 1) 90%,
+      rgba(190, 214, 173, 1) 100%
+    );
+  }
 
-.project-section-header {
-  background: linear-gradient(180deg, rgba(132,155,103,1) 0%, rgba(141,164,114,1) 15%, rgba(157,180,133,1) 43%, rgba(162,185,139,1) 52%, rgba(167,190,145,1) 61%, rgba(172,195,151,1) 69%, rgba(177,200,157,1) 77%, rgba(181,204,162,1) 84%, rgba(184,208,166,1) 90%, rgba(190,214,173,1) 100%);
-}
+  .project-section {
+    background: #bed6ad;
+  }
 
-.project-section {
-  background: #bed6ad;
-}
+  .project-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+    width: 85vw;
+    height: auto;
+    border-radius: 1.25em;
+    box-shadow: 0 3px 1.25em 0 rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin-bottom: 8vh;
+    background: white;
+  }
 
-.project-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 5%;
-  width: 85vw;
-  height: auto;
-  border-radius: 1.25em;
-  box-shadow: 0 3px 1.25em 0 rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  margin-bottom: 8vh;
-  background: white;
-}
+  .project-description {
+    border-top: 1px solid rgba(78, 82, 85, 0.3);
+    border-bottom: 1px solid rgba(78, 82, 85, 0.3);
+    height: auto;
+  }
 
-.project-description {
-  border-top: 1px solid rgba(78,82,85,.3);
-  border-bottom: 1px solid rgba(78, 82, 85, 0.3);
-  height: auto;
-}
+  .project-description p {
+    font-size: 1.75rem;
+    line-height: 2.4rem;
+    padding: 4%;
+  }
 
-.project-description p {
-  font-size: 1.75rem;
-  line-height: 2.4rem;
-  padding: 4%;
-}
+  .project-container-img {
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+    margin-top: -3.5vh;
+    padding-bottom: 2.3vh;
+  }
 
-.project-container-img { 
-  display: flex;
-  justify-content: center;
-  overflow: visible;
-  margin-top: -3.5vh;
-  padding-bottom: 2.3vh;
-}
+  .project-container-img img {
+    transform: scale(0.7);
+  }
 
-.project-container-img img{
-  transform: scale(.7);
-}
+  .project-container-img .overlay-icons {
+    display: flex;
+    flex-direction: row;
+    top: 76.5%;
+    opacity: 1;
+    transform: scale(1);
+  }
 
-.project-container-img .overlay-icons {
-  display: flex;
-  flex-direction: row;
-  top: 76.5%;
-  opacity: 1;
-  transform: scale(1);
-}
+  .overlay-icons a::after {
+    content: "";
+    display: block;
+    border-top: 1px solid black;
+  }
 
-.overlay-icons a::after {
-  content: '';
-  display: block;
-  border-top: 1px solid black;
-}
+  .overlay-icons a:last-child {
+    left: -86px;
+  }
 
-.overlay-icons a:last-child {
-  left: -86px;
-}
+  .overlay-icons a:first-child::after {
+    content: "Website";
+    left: 7.5rem;
+  }
 
-.overlay-icons a:first-child::after {
-  content: "Website";
-  left: 7.5rem;
-}
+  .overlay-icons a:last-child::after {
+    content: "GitHub";
+    left: -4.5rem;
+  }
 
-.overlay-icons a:last-child::after {
-  content: "GitHub";
-  left: -4.5rem;
-}
+  .overlay-icons a:first-child::after,
+  .overlay-icons a:last-child::after {
+    font-size: 1.3rem;
+    font-weight: 500;
+    top: 40%;
+    letter-spacing: 0.05em;
+  }
 
-.overlay-icons a:first-child::after,
-.overlay-icons a:last-child::after {
-  font-size: 1.3rem;
-  font-weight: 500;
-  top: 40%;
-  letter-spacing: .05em;
-}
+  .overlay-icons a:last-child:hover::after,
+  .overlay-icons a:first-child:hover::after {
+    content: "";
+  }
 
-.overlay-icons a:last-child:hover::after,
-.overlay-icons a:first-child:hover::after {
-  content: "";
-}
+  .overlay-icons a > img {
+    width: 7rem;
+  }
 
-.overlay-icons a > img {
-  width: 7rem;
-}
+  .project-icon-bar img {
+    width: 3.5em;
+  }
 
-.project-icon-bar img {
-  width: 3.5em;
-}
+  /* =============== [ CONTACT ] ================ */
 
-/* =============== [ CONTACT ] ================ */
+  section.contact-section {
+    height: 100vh;
+    padding-bottom: 0;
+  }
 
-section.contact-section {
-  height: 100vh;
-  padding-bottom: 0;
-}
+  .contact-main {
+    background: #bed6ad;
+    width: 80vw;
+    height: 62vh;
+    padding-bottom: 0;
+  }
 
-.contact-main {
-  background: #bed6ad;
-  width: 80vw;
-  height: 62vh;
-  padding-bottom: 0;
-}
+  .contact-flex {
+    height: 75%;
+    justify-content: space-between;
+  }
 
-.contact-flex {
-  height: 75%;
-  justify-content: space-between;
-}
+  .contact-links:first-child {
+    margin-top: 3em;
+  }
 
-.contact-links:first-child {
-  margin-top: 3em;
-}
+  .contact-links i {
+    font-size: 2rem;
+  }
 
-.contact-links i {
-  font-size: 2rem;
-}
+  .icon-names {
+    font-size: 1.5em;
+  }
 
-.icon-names {
-  font-size: 1.5em;
-}
-
-.contact-links a:active .icon-names {
-  font-weight: bold;
-  color: #ed462f;
-}
-
+  .contact-links a:active .icon-names {
+    font-weight: bold;
+    color: #ed462f;
+  }
 }
 
 /* ============= [ SMALL PHONES ] ============= */
 @media screen and (max-width: 410px) {
+  /* ================ [ ROOT ] ================== */
 
-/* ================ [ ROOT ] ================== */
+  html,
+  body {
+    font-size: 10px;
+  }
 
-html, body {font-size: 10px}
+  /* =============== [ HEADER ] ================= */
+  /* =============== [ ABOUT ] ================== */
 
-/* =============== [ HEADER ] ================= */
-/* =============== [ ABOUT ] ================== */
+  .about-right p {
+    font-size: 1.3em;
+    padding: 0;
+    line-height: 1.3em;
+  }
 
-.about-right p {
-  font-size: 1.3em;
-  padding: 0;
-  line-height: 1.3em;
-}
+  .about-left img {
+    min-width: 60vw;
+    width: auto;
+  }
 
-.about-left img {
-  min-width: 60vw;
-  width: auto;
-}
+  /* =============== [ SKILLS ] ================= */
 
-/* =============== [ SKILLS ] ================= */
+  .skills-section {
+    height: auto;
+    justify-content: flex-end;
+  }
 
-.skills-section {
-  height: auto;
-  justify-content: flex-end;
-}
+  .skills-bar img {
+    width: 3rem;
+  }
 
-.skills-bar img {
-  width: 3rem;
-}
+  .skills-icon {
+    padding: 1.1vw;
+  }
 
-.skills-icon {
-  padding: 1.1vw;
-}
+  /* =============== [ PROJECTS ] =============== */
 
-/* =============== [ PROJECTS ] =============== */
+  .project-container-img img {
+    transform: scale(0.625);
+  }
 
-.project-container-img img{
-  transform: scale(.625);
-}
+  .project-container-img .overlay-icons {
+    top: 75%;
+    transform: scale(1.05);
+  }
 
-.project-container-img .overlay-icons {
-  top: 75%;
-  transform: scale(1.05);
-}
+  .overlay-icons a:first-child::after {
+    content: "Website";
+    left: 6.5rem;
+  }
 
-.overlay-icons a:first-child::after {
-  content: "Website";
-  left: 6.5rem;
-}
+  .overlay-icons a:last-child::after {
+    content: "GitHub";
+    left: -3.4rem;
+  }
 
-.overlay-icons a:last-child::after {
-  content: "GitHub";
-  left: -3.4rem;
-}
+  .project-section-header,
+  #projects {
+    background: #849b67;
+  }
 
-.project-section-header,
-#projects {
-  background: #849b67;
-}
+  .project-section-header {
+    padding-bottom: 1rem;
+  }
 
-.project-section-header {
-  padding-bottom: 1rem;
-}
+  .project-section {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto;
+  }
 
-.project-section {
-  display: grid;
-  grid-template-columns: 100vw;
-  grid-template-rows: auto;
-}
+  .project-section:first-child {
+    margin-top: 4rem;
+  }
 
-.project-section:first-child {
-  margin-top: 4rem;
-}
-
-.project-section .project-container {
-  width: 90vw;
-  justify-self: center;
-}
-
+  .project-section .project-container {
+    width: 90vw;
+    justify-self: center;
+  }
 }
 
 /* ============== [ SMALL PHONES ] =============== */
 @media screen and (max-width: 380px) {
-
   /* ================ [ ROOT ] ================== */
   /* =============== [ HEADER ] ================= */
   /* =============== [ ABOUT ] ================== */
@@ -1178,7 +1185,7 @@ html, body {font-size: 10px}
   .skills-bar img {
     width: 3rem;
   }
-  
+
   .skills-icon {
     padding: 2vw;
   }
@@ -1189,10 +1196,10 @@ html, body {font-size: 10px}
     font-size: 1.3rem;
     line-height: 2.4rem;
     padding: 4%;
-  } 
+  }
 
-  .project-container-img img{
-    transform: scale(.55);
+  .project-container-img img {
+    transform: scale(0.55);
   }
 
   .project-container-img .overlay-icons {
@@ -1205,7 +1212,7 @@ html, body {font-size: 10px}
     left: 1.3rem;
     top: 85%;
   }
-  
+
   .overlay-icons a:last-child::after {
     content: "GitHub";
     left: 1.5rem;
