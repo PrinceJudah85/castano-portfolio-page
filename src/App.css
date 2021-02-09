@@ -622,7 +622,7 @@ section.contact-section {
    }
  
   .project-container-img .overlay-icons {
-    top: calc(auto / 2);
+    top: 50%;
   }
 
   .project-description {
