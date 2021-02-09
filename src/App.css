@@ -275,7 +275,6 @@ nav ul a:hover {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* justify-content: center; */
   margin-top: 5%;
   width: 28vw; 
   height: -moz-fit-content;
@@ -440,15 +439,19 @@ nav ul a:hover {
 }
 
 /* =========================== [ CONTACT ] ============================ */
+section.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
+}
 
 .contact-main {
   width: 32vw;
-  margin: auto;
   background: #ffffff;
   box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.5);
   border-radius: 1.25em;
   padding-bottom: 2em;
-  margin-bottom: 2.5em;
 }
 
 .contact-title {
@@ -506,7 +509,7 @@ nav ul a:hover {
 .bm-burger-button {
   display: inline-block;
   position: fixed;
-  top: 1vh;
+  top: 3vh;
   right: 3vw;
   width: 9vw;
   height: 4vh;
@@ -528,10 +531,6 @@ nav ul a:hover {
   height: 1rem;
   width: 1rem;
   background: #ed462f;
-}
-
-.bm-cross-button:hover {
-  cursor: pointer;
 }
 
 /* Color/shape of close button cross */
@@ -686,7 +685,6 @@ nav ul a:hover {
     grid-area: description;
     border-top: none;
     border-bottom: none;
-    /* align-self: center; */
   }
 
   .project-description p {
@@ -819,6 +817,20 @@ header {
 }
 
 /* ================ [ HEADER ] ================= */
+.header-title {
+  transform: translate(0, 75%);
+}
+
+.first-initials {
+  font-size: 11vw;
+}
+
+.name-end {
+  font-size: 9vw;
+  letter-spacing: .15rem;
+  opacity: 0;
+}
+
 .name {
   align-self: center;
 }
@@ -832,33 +844,56 @@ h2 {
 }
 /* =============== [ ABOUT ] ================== */
 .about {
-  height: 56vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: auto;
+  justify-content: space-between;
+  background: #849b67;
 }
 
 .about-section {
-  margin-top: 2vh;
-  height: 50vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  box-shadow: 0 0 0 0 #000;
+  margin-top: 0;
+  height: auto;
+  max-height: 68vh;
+  min-height: 57vh;
+  grid-gap: 2vh;
 }
 
-.about-section p {
-  font-size: 1.45rem;
-  line-height: 2rem;
+.about-left {
+  width: auto;
+  justify-self: center;
+  align-self: flex-start;
+  background: transparent;
 }
 
 .about-left img {
-  width: 96%;
+  display: inline-block;
+  border-radius: 30px;
+  max-width: 50vw;
+  width: auto;
+  border: 0.25rem solid #ed462f;
+  padding: 0;
 }
 
 .about-right {
-  padding: 0;
+  border-radius: 2%;
+  width: 90vw;
+  align-self: center;
+}
+
+.about-right p{
+  font-size: 1.4rem;
+  line-height: 1.3em;
+  padding: .4em;
 }
 
 /* =============== [ SKILLS ] ================= */
 .skills-section {
-  height: 50vh;
+  padding: 2vh 0;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -877,11 +912,11 @@ h2 {
 }
 
 .skills-bar img {
-  width: 3.8rem;
+  width: 3.25rem;
 }
 
 .skills-icon {
-  padding: 2.5vw;
+  padding: 1vw;
 }
 
 .hover-icon-effect::after {
@@ -890,6 +925,14 @@ h2 {
 }
 
 /* =============== [ PROJECTS ] =============== */
+.project-section-header {
+  background: linear-gradient(180deg, rgba(132,155,103,1) 0%, rgba(141,164,114,1) 15%, rgba(157,180,133,1) 43%, rgba(162,185,139,1) 52%, rgba(167,190,145,1) 61%, rgba(172,195,151,1) 69%, rgba(177,200,157,1) 77%, rgba(181,204,162,1) 84%, rgba(184,208,166,1) 90%, rgba(190,214,173,1) 100%);
+}
+
+.project-section {
+  background: #bed6ad;
+}
+
 .project-container {
   display: flex;
   flex-direction: column;
@@ -901,6 +944,7 @@ h2 {
   box-shadow: 0 3px 1.25em 0 rgba(0, 0, 0, 0.5);
   overflow: hidden;
   margin-bottom: 8vh;
+  background: white;
 }
 
 .project-description {
@@ -980,76 +1024,67 @@ h2 {
 }
 
 /* =============== [ CONTACT ] ================ */
-.contact-main {
-  margin-top: 8vh;
-  width: 60vw;
+section.contact-section {
+  height: 100vh;
+  padding-bottom: 0;
 }
+
+.contact-main {
+  background: #bed6ad;
+  width: 80vw;
+  height: 62vh;
+  padding-bottom: 0;
+}
+
+.contact-flex {
+  height: 75%;
+  justify-content: space-between;
+}
+
+.contact-links:first-child {
+  margin-top: 3em;
+}
+
+.contact-links i {
+  font-size: 2rem;
+}
+
+.icon-names {
+  font-size: 1.5em;
+}
+
+.contact-links a:active .icon-names {
+  font-weight: bold;
+  color: #ed462f;
+}
+
 }
 
 /* ============= [ SMALL PHONES ] ============= */
-@media screen and (max-width: 424px) {
+@media screen and (max-width: 410px) {
   html, body {font-size: 10px}
-  .section {height: 0;}
 /* ================ [ ROOT ] ================== */
 /* =============== [ HEADER ] ================= */
 /* =============== [ ABOUT ] ================== */
-.about {
-  height: auto;
-  justify-content: space-between;
-  background: #e2edda;
-}
-
-.about-section {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 35% 65%;
-  justify-items: center;
-  box-shadow: 0 0 0 0 #000;
-  margin-top: 0;
-  height: auto;
-  max-height: 68vh;
-  min-height: 60vh;
-  grid-gap: 2vh;
-}
-
-.about-left {
-  width: auto;
-  justify-self: center;
-  align-self: flex-start;
-  background: transparent;
+.about-right p {
+  font-size: 1.3em;
+  padding: 0;
+  line-height: 1.3em;
 }
 
 .about-left img {
-  display: inline-block;
-  border-radius: 30px;
-  max-width: 61vw;
+  min-width: 60vw;
   width: auto;
-  border: 0.25rem solid #ed462f;
-  padding: 0;
-}
-
-.about-right {
-  border-radius: 2%;
-  width: 90vw;
-  align-self: center;
-}
-
-.about-right p{
-  font-size: 1.4rem;
-  line-height: 1.3em;
-  padding: 1.2rem;
 }
 /* =============== [ SKILLS ] ================= */
 
 .skills-section {
   height: auto;
   justify-content: flex-end;
-  background: #e2edda;
-  padding-top: 2vh;
 }
 
 .skills-bar img {
-  width: 3.25rem;
+  width: 3rem;
 }
 
 .skills-icon {
@@ -1078,11 +1113,11 @@ h2 {
 }
 
 #projects {
-  background: #e2edda;
+  background: #849b67;
 }
 
 .project-section-header {
-  background: #e2edda;
+  background: #849b67;
   padding-bottom: 1rem;
 }
 
@@ -1108,11 +1143,10 @@ h2 {
   /* ================ [ ROOT ] ================== */
   /* =============== [ HEADER ] ================= */
   /* =============== [ ABOUT ] ================== */
-  /* .about-right p {
-    font-size: 1.2em;
-    line-height: 1.2em;
-    padding: 1rem;
-  } */
+  .about-left img {
+    max-width: 60vw;
+    width: auto;
+  }
   /* =============== [ SKILLS ] ================= */
 
   .skills-bar img {
@@ -1150,5 +1184,5 @@ h2 {
     left: 1.5rem;
     top: 85%;
   }
-  /* =============== [ CONTACT ] ================ */
+
   }

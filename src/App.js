@@ -15,22 +15,18 @@ import BurgerMenu from './components/BurgerMenu'; // Burger Menu Class Component
 function App () {
   return (
     <>
-      {/* <div className='app'> */}
-        {/* <div id="outer-container"> */}
-          <BurgerMenu pageWrapId={"page-wrap"} />
-          <Header />
-          <Navbar />
-        {/* </div> */}
-          <main id='page-wrap'>
-            <About />
-            <Skills stacks={stacks}/>
-            <Projects />
-            <Contact />
-            <Footer />
-          </main>
-      {/* </div> */}
-  </>
-    );
+      <BurgerMenu pageWrapId={"page-wrap"} />
+      <Header />
+      <Navbar />
+      <main id='page-wrap'>
+        <About />
+        <Skills stacks={stacks}/>
+        <Projects />
+        <Contact />
+        <Footer />
+      </main>
+    </>
+  );
 }
 
 export default App;
