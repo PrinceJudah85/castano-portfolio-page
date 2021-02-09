@@ -620,10 +620,6 @@ section.contact-section {
     font-size: 2.2vw;
   }
 
-  .project-container-img .overlay-icons {
-    top: calc(auto/2);
-  }
-
   .project-description {
     border-top: none;
   }
