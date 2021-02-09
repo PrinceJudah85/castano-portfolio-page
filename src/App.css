@@ -44,7 +44,7 @@ h2::after {
 
 h3 {
   font-family: "Roboto", Arial, Helvetica;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: #ed462f;
   text-align: center;
@@ -53,13 +53,7 @@ h3 {
 
 /* ================ [ REUSABLE COMPONENT ] ================= */
 
-/* .mobile-header { Can't find this class in any component
-  display: inline-block;
-} */
-
 /* ===================== [ HEADER ] ======================= */
-/* https://i.imgur.com/tAqcZat.jpg?1 */
-/* image url: /resources/css/hero-img.jpg  */
 header {
   background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, 0.6)),
     url('./images/hero-img.png'); 
@@ -189,8 +183,8 @@ nav ul a:hover {
 
 .about-section {
   display: flex;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 0 5%;
+  width: 90%;
   box-shadow: 0px 10px 10px 5px #000;
 }
 
@@ -215,7 +209,6 @@ nav ul a:hover {
   width: 95%;
   align-items: center;
   border: 0.25rem solid #ed462f;
-  border-left: none;
   padding: 1.4rem;
   background: rgb(236, 233, 233);
 }
@@ -235,12 +228,11 @@ nav ul a:hover {
 }
 
 .skills-display {
-  height: 17vh;
+  height: auto;
   background: #333;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 0 5%;
   padding-top: 1%;
-  padding-bottom: 14%;
+  padding-bottom: 4%;
   box-shadow: 0 10px 10px 5px #000;
 }
 
@@ -253,8 +245,8 @@ nav ul a:hover {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  width: 80%;
-  margin: auto;
+  /* width: 80%; */
+  width: auto;
   background: #333;
   position: relative;
 }
@@ -282,9 +274,11 @@ nav ul a:hover {
 .project-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  /* justify-content: center; */
   margin-top: 5%;
-  width: 26vw;
+  width: 28vw; 
+  height: -moz-fit-content;
   height: fit-content;
   border-radius: 1.25em;
   box-shadow: 0 3px 1.25em 0 rgba(0, 0, 0, 0.5);
@@ -304,12 +298,12 @@ nav ul a:hover {
   justify-content: center;
   text-align: center;
   align-items: center;
-  padding: 2.5%;
+  padding: 2%;
   border-top: 1px solid rgba(78,82,85,.3);
   border-bottom: 1px solid rgba(78, 82, 85, 0.3);
-  line-height: 1.5em;
-  height: 23vh;
-  min-height: 16vh;
+  line-height: 1.4em;
+  height: auto;
+  min-height: 21vh; 
 }
 
 .project-icon-bar {
@@ -328,7 +322,7 @@ nav ul a:hover {
   font-family: "Roboto", helvetica;
   font-weight: 400;
   font-size: .9rem;
-  letter-spacing: .04rem;
+  letter-spacing: .02rem;
 }
 
 #projects {
@@ -342,6 +336,9 @@ nav ul a:hover {
   align-items: center;
   position: relative;
   overflow: hidden;
+}
+
+.project-img {
   object-fit: contain;
 }
 
@@ -492,30 +489,116 @@ nav ul a:hover {
   color: #10110f;
 }
 
-/* ====================== [Burger Menu] ======================== */
-#burger-menu,
-.burger-menu,
-.small-header,
-.mobile-header,
-.bm-item-list {
-  display: none;
-  width: 0;
-  height: 0;
-  z-index: 0;
-}
-
-button,
-.bm-burger-button {
-  display: none;
-  height: 0px;
-  width: 0px;
-  z-index: 0;
-}
-
 /* ========================= [ FOOTER ] ========================= */
-
 .footer-section {
   text-align: center;
+}
+
+/* ========================= [ Burger Menu ] ==================== */
+.bm-menu-wrap,
+.bm-overlay,
+.bm-burger-button {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  /* Position and sizing of burger button */
+.bm-burger-button {
+  display: inline-block;
+  position: fixed;
+  top: 1vh;
+  right: 3vw;
+  width: 9vw;
+  height: 4vh;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background:#fbce33;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  font-weight: bold;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  /* display: inline-block; */
+  height: 1rem;
+  width: 1rem;
+  background: #ed462f;
+}
+
+.bm-cross-button:hover {
+  cursor: pointer;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: black;
+}
+
+/* Sidebar wrapper styles */
+.bm-menu-wrap {
+  display: block;
+  height: auto !important;
+  width: auto !important;
+  opacity: .9;
+}
+
+/* General Sidebar styles */
+.bm-menu {
+  display: block;
+  background: #fbce33;
+  padding: 1rem;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: white;
+  font-size: 1rem;
+  padding: .6rem;
+  text-align: center;
+  margin-top: 3.6vh;
+  background: #849b67;
+  height: 86% !important;
+}
+
+.bm-item-list a {
+  text-decoration: none;
+  color: white;
+  font-size: 3rem;
+  border-bottom: 2px solid white;
+  padding: .7rem;
+}
+
+.bm-item-list a:active {
+  background: #ed462f;
+  font-weight: bold;
+}
+
+.bm-item-list a:visited {
+  text-decoration: none;
+}
+
+.bm-item-list a:first-child {
+  padding-top: .75rem;
+}
+
+/* Individual item */
+.bm-item {
+  display: grid !important;
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: .75vh;
+  border: 2px solid white;
+  border-bottom: none;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  display: none;
+}
 }
 
 /* =========================== [Media Queries] ============================ */
@@ -537,27 +620,16 @@ button,
   .project-container-img .overlay-icons {
     top: calc(auto / 2);
   }
+
+  .project-description {
+    border-top: none;
+  }
 }
 
 /* =========================== [ For iPod Pro ] =========================== */
 @media screen and (max-width: 1024px) {
-  #burger-menu,
-  .burger-menu,
-  .small-header,
-  .mobile-header,
-  .bm-item-list {
-    display: none;
-    width: 0;
-    height: 0;
-    z-index: 0;
-  }
-
-  button,
-  .bm-burger-button {
-    display: none;
-    width: 0;
-    height: 0;
-    z-index: 0;
+  h3 {
+    font-size: 2.5rem;
   }
 
   /* ================ [ HEADER ] ================= */
@@ -572,11 +644,12 @@ button,
   .about-left img {
     width: 90%;
   }
-  /* ================= [ SKILLS ] ================= */
-  .skills-display {
-    height: 15vh;
-    padding-bottom: 14%;
+
+  .about-right p {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
   }
+  /* ================= [ SKILLS ] ================= */
   /* ================ [ PROJECTS ] ================= */
   .project-section {
     display: flex;
@@ -613,7 +686,7 @@ button,
     grid-area: description;
     border-top: none;
     border-bottom: none;
-    align-self: center;
+    /* align-self: center; */
   }
 
   .project-description p {
@@ -625,7 +698,7 @@ button,
   .project-description::before {
     content: '';
     display: block;
-    margin-left: -1.3rem;
+    padding-right: 1.3rem;
     height: 100%;
     border-left: 1px solid rgba(78,82,85,.2);
   }
@@ -699,6 +772,9 @@ button,
 
 /* ========= [ Ipad && X-Large Phones ] =========== */
 @media screen and (min-width: 601px ) and (max-width: 768) {
+  h3 {
+    font-size: 3rem;
+  }
 /* =============== [ HEADER ] ================ */
 /* =============== [ NAVBAR ] ================ */
 /* ================ [ ABOUT ] ================ */
@@ -725,66 +801,6 @@ button,
 /* ================= [LARGE PHONES] ================= */
 @media screen and (max-width: 600px) {
 
-/* ============= [ Burger Menu ] ============== */
-/* Position and sizing of burger button */
-.bm-burger-button {
-  display: inline-block;
-  position: fixed;
-  width: 16vw;
-  height: auto;
-  top: 0;
-  right: 0;
-}
-
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  display: block;
-  background:#fbce33;
-}
-
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  font-weight: bold;
-}
-
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  display: inline-block;
-  height: 1.1rem;
-  width: 1.1rem;
-}
-
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #fbce33;
-}
-
-/* Sidebar wrapper styles */
-.bm-menu-wrap {
-  position: fixed;
-  height: 100%;
-}
-
-/* General Sidebar styles */
-.bm-menu {
-  display: block;
-  background: #fbce33;
-  padding: 1rem;
-  font-size: 1.2rem;
-  color: #ed462f;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-  padding: 0.7em;
-}
-
-/* Individual item */
-.bm-item {
-  display: inline-block;
-}
-
 /* ================ [ ROOT ] ================= */
 
 html,
@@ -794,19 +810,15 @@ body {
 
 header {
   height: 100vh;
-}
-
-nav {
-  display: none;
-}
-
-/* ================ [ HEADER ] ================= */
-header {
-  height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.3)),
     url('./images/mobile-hero-image.png'); 
 }
 
+#navbar {
+  display: none;
+}
+
+/* ================ [ HEADER ] ================= */
 .name {
   align-self: center;
 }
@@ -832,8 +844,8 @@ h2 {
 }
 
 .about-section p {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-size: 1.45rem;
+  line-height: 2rem;
 }
 
 .about-left img {
@@ -855,9 +867,8 @@ h2 {
 .skills-display {
   display: flex;
   flex-direction: column;
-  height: 30vh;
-  padding-top: 2%;
-  padding-bottom: 4%;
+  height: auto;
+  padding: 2% 0;
 }
 
 .skills-bar {
@@ -884,7 +895,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   margin-top: 5%;
-  width: 80vw;
+  width: 85vw;
   height: auto;
   border-radius: 1.25em;
   box-shadow: 0 3px 1.25em 0 rgba(0, 0, 0, 0.5);
@@ -936,7 +947,7 @@ h2 {
 
 .overlay-icons a:first-child::after {
   content: "Website";
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 500;
   top: 40%;
   left: 7.5rem;
@@ -945,10 +956,10 @@ h2 {
 
 .overlay-icons a:last-child::after {
   content: "GitHub";
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 500;
   top: 40%;
-  left: -4rem;
+  left: -4.5rem;
   letter-spacing: .05em;
 }
 
@@ -973,9 +984,7 @@ h2 {
   margin-top: 8vh;
   width: 60vw;
 }
-/* ============= [ BURGER MENU ] ============== */
 }
-
 
 /* ============= [ SMALL PHONES ] ============= */
 @media screen and (max-width: 424px) {
@@ -985,23 +994,26 @@ h2 {
 /* =============== [ HEADER ] ================= */
 /* =============== [ ABOUT ] ================== */
 .about {
-  height: 68vh;
-  justify-content: flex-start;
+  height: auto;
+  justify-content: space-between;
   background: #e2edda;
 }
 
 .about-section {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 1fr;
-  width: 90vw;
+  grid-template-rows: 35% 65%;
+  justify-items: center;
   box-shadow: 0 0 0 0 #000;
   margin-top: 0;
-  height: 63vh;
+  height: auto;
+  max-height: 68vh;
+  min-height: 60vh;
+  grid-gap: 2vh;
 }
 
 .about-left {
-  width: 75vw;
+  width: auto;
   justify-self: center;
   align-self: flex-start;
   background: transparent;
@@ -1009,22 +1021,23 @@ h2 {
 
 .about-left img {
   display: inline-block;
-  margin-top: -.4rem;
   border-radius: 30px;
-  width: 80%;
+  max-width: 61vw;
+  width: auto;
+  border: 0.25rem solid #ed462f;
+  padding: 0;
 }
 
 .about-right {
   border-radius: 2%;
   width: 90vw;
-  padding: 0;
+  align-self: center;
 }
 
 .about-right p{
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.3em;
   padding: 1.2rem;
-  border-left: 2px solid #ed462f;
 }
 /* =============== [ SKILLS ] ================= */
 
@@ -1032,16 +1045,11 @@ h2 {
   height: auto;
   justify-content: flex-end;
   background: #e2edda;
-  padding-top: 3vh;
-}
-
-.skills-display {
-  height: 22vh;
-  padding-bottom: 2%;
+  padding-top: 2vh;
 }
 
 .skills-bar img {
-  width: 3.75rem;
+  width: 3.25rem;
 }
 
 .skills-icon {
@@ -1051,12 +1059,12 @@ h2 {
 /* =============== [ PROJECTS ] =============== */
 
 .project-container-img img{
-  transform: scale(.6);
+  transform: scale(.625);
 }
 
 .project-container-img .overlay-icons {
-  top: 73%;
-  transform: scale(1.125);
+  top: 75%;
+  transform: scale(1.05);
 }
 
 .overlay-icons a:first-child::after {
@@ -1081,7 +1089,7 @@ h2 {
 .project-section {
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 75vh;
+  grid-template-rows: auto;
 }
 
 .project-section:first-child {
@@ -1089,16 +1097,22 @@ h2 {
 }
 
 .project-section .project-container {
+  width: 90vw;
   justify-self: center;
 }
 /* =============== [ CONTACT ] ================ */
 }
 
 /* ============= [ SMALL PHONES ] ============= */
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 380px) {
   /* ================ [ ROOT ] ================== */
   /* =============== [ HEADER ] ================= */
   /* =============== [ ABOUT ] ================== */
+  /* .about-right p {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    padding: 1rem;
+  } */
   /* =============== [ SKILLS ] ================= */
 
   .skills-bar img {
@@ -1106,7 +1120,7 @@ h2 {
   }
   
   .skills-icon {
-    padding: 2.2vw;
+    padding: 2vw;
   }
   /* =============== [ PROJECTS ] =============== */
 
@@ -1117,7 +1131,7 @@ h2 {
 } 
 
   .project-container-img img{
-    transform: scale(.5);
+    transform: scale(.55);
   }
 
   .project-container-img .overlay-icons {

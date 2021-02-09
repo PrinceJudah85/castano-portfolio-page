@@ -13,11 +13,14 @@ import { stacks } from './svg-icons';
 import BurgerMenu from './components/BurgerMenu'; // Burger Menu Class Component
 
 function App () {
-    return (
-      <>
-        <BurgerMenu pageWrapId={'page-wrap'} />
+  return (
+    <>
+      {/* <div className='app'> */}
+        {/* <div id="outer-container"> */}
+          <BurgerMenu pageWrapId={"page-wrap"} />
           <Header />
           <Navbar />
+        {/* </div> */}
           <main id='page-wrap'>
             <About />
             <Skills stacks={stacks}/>
@@ -25,7 +28,8 @@ function App () {
             <Contact />
             <Footer />
           </main>
-      </>
+      {/* </div> */}
+  </>
     );
 }
 
